@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Tanuja M C — Software Engineer specializing in Java, Python, C, IoT sensor-based alert systems, and modern web applications.">
+  <meta name="keywords" content="Tanuja M C, Software Engineer, Java, Python, C, IoT, Web Development, Portfolio">
+  <meta name="author" content="Tanuja M C">
+  <title>Tanuja M C | Software Engineer Portfolio</title>
+  
+  <!-- Modern Clean Typography: Outfit (Headings) & Inter (Body) + Pixel Art Fonts: Silkscreen & Press Start 2P -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ========================================================
+       HEADER & NAVIGATION SECTION
+       Contains branding, navigation links, and night mode toggle
+       ======================================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span><span class="logo-text">Tanuja</span><span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- ========================================================
+             NIGHT MODE / DARK THEME TOGGLE
+             Uses CSS media query detection by default with manual override
+             ======================================================== -->
+        <!-- NIGHT MODE TOGGLE START -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Night Mode" title="Toggle Night/Light Mode">
+          <span class="toggle-icon sun-icon" aria-hidden="true">☀️</span>
+          <span class="toggle-icon moon-icon" aria-hidden="true">🌙</span>
+        </button>
+        <!-- NIGHT MODE TOGGLE END -->
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       MAIN CONTENT CONTAINER
+       ======================================================== -->
+  <main id="main-content">
+
+    <!-- ========================================================
+         1. HERO SECTION (MINIMAL PROFESSIONAL THEME)
+         - Welcome title & brief tagline
+         - Background image: portfolio.avif
+         - Minimal status badge & engineering metrics
+         - Interactive code preview card
+         - Night mode toggle with CSS media query detection
+         ======================================================== -->
+    <!-- HERO SECTION START -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
+      <div class="hero-background-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Left Column: Welcome Title, Tagline, Metrics & Professional CTAs -->
+        <div class="hero-content">
+          <!-- Status pill badge & in-hero theme indicator -->
+          <div class="hero-top-meta">
+            <div class="hero-badge">
+              <span class="badge-dot"></span> Available for new opportunities
+            </div>
+            
+            <button id="hero-theme-toggle" class="hero-theme-pill" aria-label="Toggle Night / Light Mode" title="Click to toggle theme">
+              <span class="theme-pill-label">Theme:</span>
+              <span class="theme-status-text" id="theme-status-text">Auto</span>
+              <span class="toggle-icon sun-icon" aria-hidden="true"> ☀️</span>
+              <span class="toggle-icon moon-icon" aria-hidden="true"> 🌙</span>
+            </button>
+          </div>
+
+          <!-- Welcome Title -->
+          <h1 id="hero-title" class="hero-title">
+            Welcome, Visitor.<br>
+            I'm <span class="gradient-text">Tanuja M C</span>.
+          </h1>
+
+          <!-- Brief Tagline -->
+          <p class="hero-tagline">
+            Software Engineer specializing in Java, Python, C, IoT sensor-based alert architectures, and modern web applications.
+          </p>
+
+          <!-- Minimal Engineering Metrics -->
+          <div class="hero-metrics-grid">
+            <div class="metric-card">
+              <span class="metric-number">3+</span>
+              <span class="metric-label">Languages (Java/Py/C)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">IoT</span>
+              <span class="metric-label">Sensor Systems</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Clean Code Focus</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons (Minimal Professional Style) -->
+          <div class="hero-cta-group">
+            <a href="#about" class="btn btn-primary" id="btn-hero-about">
+              About Me &rarr;
+            </a>
+            <a href="#projects" class="btn btn-secondary" id="btn-hero-projects">
+              View Projects
+            </a>
+            <a href="resume2.pdf" class="btn btn-ghost" id="btn-hero-resume" download="Tanuja_MC_Resume.pdf">
+              Resume 📄
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Minimal Professional Code Architecture Card -->
+        <div class="hero-visual">
+          <div class="code-preview-card">
+            <div class="code-card-header">
+              <div class="window-controls">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="code-file-name">tanuja_profile.ts</span>
+              <span class="code-badge">TypeScript</span>
+            </div>
+            <pre class="code-body"><code><span class="token-keyword">interface</span> <span class="token-type">EngineerProfile</span> {
+  <span class="token-prop">name</span>: <span class="token-string">"Tanuja M C"</span>;
+  <span class="token-prop">role</span>: <span class="token-string">"Software Engineer"</span>;
+  <span class="token-prop">languages</span>: [<span class="token-string">"Java"</span>, <span class="token-string">"Python"</span>, <span class="token-string">"C"</span>];
+  <span class="token-prop">focus</span>: [<span class="token-string">"Clean Code"</span>, <span class="token-string">"IoT Sensors"</span>, <span class="token-string">"Web"</span>];
+  <span class="token-prop">standards</span>: {
+    <span class="token-prop">cleanArchitecture</span>: <span class="token-boolean">true</span>;
+    <span class="token-prop">analyticalProblemSolving</span>: <span class="token-boolean">true</span>;
+  };
+}
+
+<span class="token-keyword">const</span> <span class="token-variable">tanuja</span>: <span class="token-type">EngineerProfile</span> = {
+  <span class="token-prop">name</span>: <span class="token-string">"Tanuja M C"</span>,
+  <span class="token-prop">role</span>: <span class="token-string">"Software Engineer"</span>,
+  <span class="token-prop">languages</span>: [<span class="token-string">"Java"</span>, <span class="token-string">"Python"</span>, <span class="token-string">"C"</span>],
+  <span class="token-function">buildSolution</span>: () =&gt; <span class="token-string">"Designed with precision."</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- HERO SECTION END -->
+
+
+    <!-- ========================================================
+         2. ABOUT SECTION (CLEAN & MINIMALISTIC)
+         Personal profile, software engineer bio, career highlights & interests
+         ======================================================== -->
+    <!-- ABOUT SECTION START -->
+    <section class="about-section section-padding" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get To Know Me</span>
+          <h2 id="about-title" class="section-title">About <span class="gradient-text">Tanuja M C</span></h2>
+          <p class="section-lead">Dedicated software engineer passionate about clean architecture, sensor-based innovations, and purposeful problem-solving.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Profile Card with Photo, Status Badge & Quick Info -->
+          <div class="about-image-card">
+            <div class="profile-frame">
+              <div class="profile-image-container">
+                <img src="tanuja-profile.jpg" alt="Tanuja M C - Software Engineer" class="profile-image" id="about-profile-img" loading="lazy">
+                <div class="profile-status-pill">
+                  <span class="status-pulse-dot" aria-hidden="true"></span>
+                  <span>Available for Opportunities</span>
+                </div>
+              </div>
+
+              <div class="profile-card-details">
+                <h3 class="profile-card-name">Tanuja M C</h3>
+                <p class="profile-card-role">Software Engineer</p>
+
+                <div class="profile-quick-info">
+                  <div class="info-row">
+                    <span class="info-icon" aria-hidden="true">📍</span>
+                    <span class="info-label">Location:</span>
+                    <span class="info-value">Karnataka, India</span>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-icon" aria-hidden="true">🎓</span>
+                    <span class="info-label">Education:</span>
+                    <span class="info-value">B.E. in AI &amp; ML (AIT) &bull; 2nd Year</span>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-icon" aria-hidden="true">⚡</span>
+                    <span class="info-label">Core Stack:</span>
+                    <span class="info-value">Java &bull; Python &bull; C</span>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-icon" aria-hidden="true">🎯</span>
+                    <span class="info-label">Focus:</span>
+                    <span class="info-value">Software Dev &amp; IoT Alerts</span>
+                  </div>
+                </div>
+
+                <div class="profile-card-actions">
+                  <a href="resume2.pdf" class="btn btn-primary btn-sm" download="Tanuja_MC_Resume.pdf" id="btn-about-resume" title="Download Tanuja's Resume">
+                    <span class="btn-icon" aria-hidden="true">📄</span> Download Resume
+                  </a>
+                  <a href="#contact" class="btn btn-secondary btn-sm" id="btn-about-contact" title="Get in touch with Tanuja">
+                    Contact Me &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Professional Bio, Highlights & Personal Interests -->
+          <div class="about-bio-content">
+            <!-- Professional Narrative Bio -->
+            <div class="bio-text-block">
+              <h3 class="bio-heading">Transforming logical concepts into reliable, clean-coded software solutions.</h3>
+              <p class="lead-text">
+                I am a passionate and motivated <strong>Software Engineer</strong> with a strong foundation in computer science, algorithmic reasoning, and software development. With hands-on proficiency in <strong>Java, Python, and C</strong>, I love tackling intricate engineering problems and creating systems that are both technically robust and user-friendly.
+              </p>
+              <p class="bio-description">
+                My engineering approach is built around discipline, clean code architecture, and a relentless desire to learn. Whether I am writing modular object-oriented programs, analyzing data flows, or engineering sensor-integrated alert mechanisms, I take pride in crafting maintainable, high-quality code that solves real-world challenges.
+              </p>
+            </div>
+
+            <!-- Career Highlights -->
+            <div class="highlights-container">
+              <h4 class="subheading-minimal">Career &amp; Technical Highlights</h4>
+              <div class="highlights-grid">
+                <!-- Highlight 1: Key Project -->
+                <div class="highlight-item">
+                  <div class="highlight-icon-box" aria-hidden="true">🌧️</div>
+                  <div class="highlight-text">
+                    <h5>Rain Detection and Alert System</h5>
+                    <p>Conceptualized and engineered an automated sensor-based alert system capable of detecting precipitation in real time and triggering prompt notifications. Applied core programming logic to interface hardware sensors with automated software alerts.</p>
+                  </div>
+                </div>
+
+                <!-- Highlight 2: Core Engineering Foundations -->
+                <div class="highlight-item">
+                  <div class="highlight-icon-box" aria-hidden="true">💻</div>
+                  <div class="highlight-text">
+                    <h5>Object-Oriented Programming &amp; Logic</h5>
+                    <p>Deep familiarity with Object-Oriented Programming (OOP) paradigms, structured algorithm design, data structures, and cross-language implementation across Java, Python, and C.</p>
+                  </div>
+                </div>
+
+                <!-- Highlight 3: Academic Foundations -->
+                <div class="highlight-item">
+                  <div class="highlight-icon-box" aria-hidden="true">🎓</div>
+                  <div class="highlight-text">
+                    <h5>Academic Foundations &amp; Discipline</h5>
+                    <p>Pursuing B.E. in Artificial Intelligence &amp; Machine Learning at Adichunchanagiri Institute of Technology (graduating 2029), with proven academic rigor developed at Raghavendra Hi-Tech PU College (76%) and KRCR School (79%).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personal Interests -->
+            <div class="interests-container">
+              <h4 class="subheading-minimal">Personal Interests &amp; Passions</h4>
+              <div class="interest-tags">
+                <span class="interest-pill"><span class="pill-emoji">🤖</span> IoT &amp; Smart Sensor Systems</span>
+                <span class="interest-pill"><span class="pill-emoji">🧩</span> Logic Puzzles &amp; Algorithms</span>
+                <span class="interest-pill"><span class="pill-emoji">🌐</span> Modern Web Development</span>
+                <span class="interest-pill"><span class="pill-emoji">📖</span> Emerging Tech Literature</span>
+                <span class="interest-pill"><span class="pill-emoji">🌱</span> Open-Source Exploration</span>
+                <span class="interest-pill"><span class="pill-emoji">✨</span> Minimalist UI/UX Aesthetics</span>
+              </div>
+            </div>
+
+            <!-- Minimal Key Metrics -->
+            <div class="about-stats-grid">
+              <div class="stat-card">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Core Languages</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">IoT</span>
+                <span class="stat-label">Real-Time Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Dedication to Quality</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT SECTION END -->
+
+
+    <!-- ========================================================
+         3. SKILLS SECTION (PIXEL ART RPG & HUD AESTHETIC)
+         Highlights the software engineer's core competencies across:
+         - Languages: Python, C++, SQL
+         - AI & Deep Learning: Machine Learning, Deep Learning, NLP, Computer Vision, Generative AI
+         - Frameworks & APIs: PyTorch, TensorFlow, Scikit-learn, FastAPI
+         - Data & Tools: Pandas, NumPy, Git, GitHub
+         Equipped with segmented pixel progress bars, custom pixel-art icons,
+         interactive filtering, search, audio toggles, and live terminal inspector.
+         ======================================================== -->
+    <!-- SKILLS SECTION START -->
+    <section class="skills-section section-padding" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <!-- Pixel HUD Section Header -->
+        <div class="section-header">
+          <div class="pixel-badge-header" aria-hidden="true">
+            <span class="pixel-blink-dot"></span>
+            <span class="pixel-badge-text">SYSTEM STATUS: SKILL_MATRIX_V2.5 ONLINE</span>
+            <span class="pixel-blink-dot"></span>
+          </div>
+          <h2 id="skills-title" class="section-title">Core <span class="gradient-text">Competencies</span> &amp; Skills</h2>
+          <p class="section-lead">A comprehensive inventory of engineering proficiencies, machine learning frameworks, data pipelines, and developer tooling rendered with a retro pixel-art HUD aesthetic.</p>
+        </div>
+
+        <!-- Pixel RPG Summary HUD Banner -->
+        <div class="pixel-hud-banner" role="region" aria-label="Player Skill Stats">
+          <div class="pixel-hud-item">
+            <span class="pixel-hud-label">PLAYER CLASS</span>
+            <span class="pixel-hud-val">AI &bull; SWE [LVL 99]</span>
+          </div>
+          <div class="pixel-hud-item">
+            <span class="pixel-hud-label">CORE ARSENAL</span>
+            <span class="pixel-hud-val"><span id="hud-active-count">16</span> / 16 COMPETENCIES</span>
+          </div>
+          <div class="pixel-hud-item">
+            <span class="pixel-hud-label">AVG MASTERY</span>
+            <span class="pixel-hud-val text-cyan">91.4% EXP</span>
+          </div>
+          <div class="pixel-hud-item pixel-hud-controls">
+            <!-- 8-Bit Web Audio Sound Effect Toggle Button -->
+            <button id="pixel-sfx-toggle" class="pixel-btn-chip" aria-label="Toggle retro 8-bit sound effects" title="Toggle 8-bit SFX audio feedback">
+              <span class="sfx-icon">🔇</span>
+              <span class="sfx-text">SFX: OFF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Controls & Real-Time Search Bar -->
+        <div class="pixel-filter-wrapper">
+          <div class="pixel-tabs" role="tablist" aria-label="Skill Categories">
+            <button class="pixel-tab active" data-filter="all" role="tab" aria-selected="true" id="tab-all">
+              <span class="pixel-tab-icon">★</span> ALL SKILLS <span class="pixel-tab-count">(16)</span>
+            </button>
+            <button class="pixel-tab" data-filter="lang" role="tab" aria-selected="false" id="tab-lang">
+              <span class="pixel-tab-icon">⚙</span> LANGUAGES <span class="pixel-tab-count">(3)</span>
+            </button>
+            <button class="pixel-tab" data-filter="aiml" role="tab" aria-selected="false" id="tab-aiml">
+              <span class="pixel-tab-icon">🧠</span> AI &amp; MACHINE LEARNING <span class="pixel-tab-count">(5)</span>
+            </button>
+            <button class="pixel-tab" data-filter="frameworks" role="tab" aria-selected="false" id="tab-frameworks">
+              <span class="pixel-tab-icon">⚡</span> FRAMEWORKS &amp; APIS <span class="pixel-tab-count">(4)</span>
+            </button>
+            <button class="pixel-tab" data-filter="tools" role="tab" aria-selected="false" id="tab-tools">
+              <span class="pixel-tab-icon">🛠️</span> DATA &amp; TOOLS <span class="pixel-tab-count">(4)</span>
+            </button>
+          </div>
+
+          <!-- Quick Search Filter Box -->
+          <div class="pixel-search-box">
+            <span class="pixel-search-prefix" aria-hidden="true">&gt;&gt;</span>
+            <input type="text" id="pixel-skill-search" class="pixel-search-input" placeholder="Search skill (e.g. PyTorch, SQL, FastAPI)..." aria-label="Search skills">
+            <button id="pixel-search-clear" class="pixel-search-clear" aria-label="Clear search" title="Clear search" style="display: none;">&times;</button>
+          </div>
+        </div>
+
+        <!-- Main Skills Grid: 16 Core Competencies -->
+        <div class="skills-grid pixel-skills-grid" id="pixel-skills-grid" role="list">
+
+          <!-- ========================================================
+               SKILL 1: PYTHON
+               Represents core programming versatility, object-oriented architecture,
+               automation, and backbone for artificial intelligence / data processing.
+               - Pixel Icon: Intertwined dual-color Python serpent insignia
+               - Progress Bar: 95% proficiency with 10 segmented stamina steps
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="lang" data-skill-id="python" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Python Dual Serpent -->
+              <div class="pixel-icon-frame icon-python" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="7" y="3" width="7" height="3" fill="#38BDF8"/>
+                  <rect x="5" y="6" width="9" height="3" fill="#38BDF8"/>
+                  <rect x="5" y="9" width="5" height="4" fill="#38BDF8"/>
+                  <rect x="7" y="11" width="7" height="2" fill="#38BDF8"/>
+                  <rect x="7" y="5" width="2" height="2" fill="#0F172A"/>
+                  <rect x="10" y="18" width="7" height="3" fill="#FBBF24"/>
+                  <rect x="10" y="15" width="9" height="3" fill="#FBBF24"/>
+                  <rect x="14" y="11" width="5" height="4" fill="#FBBF24"/>
+                  <rect x="10" y="11" width="7" height="2" fill="#FBBF24"/>
+                  <rect x="15" y="17" width="2" height="2" fill="#0F172A"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-lang">LANG</span>
+                <span class="pixel-rank-badge rank-master">LVL 95</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Python</h3>
+              <p class="skill-role-desc">Core Language &bull; Scripting &amp; AI Pipelines</p>
+              
+              <!-- Progress Bar: 95% Master Tier (10-Segmented Retro Meter) -->
+              <div class="pixel-meter-wrapper" aria-label="Python Proficiency: 95%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">95%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="95">
+                  <div class="pixel-meter-fill fill-cyan" style="width: 95%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List: Practical software engineering capabilities -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">OOP Design</span>
+                <span class="pixel-tag-item">AI Automation</span>
+                <span class="pixel-tag-item">Async IO</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 2: C++
+               Represents low-level systems programming, memory control, algorithmic
+               speed, pointer management, and hardware/sensor level efficiency.
+               - Pixel Icon: Indigo pixel shield with C++ geometric monogram
+               - Progress Bar: 88% proficiency demonstrating algorithmic depth
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="lang" data-skill-id="cpp" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: C++ Shield -->
+              <div class="pixel-icon-frame icon-cpp" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="3" width="16" height="12" fill="#6366F1"/>
+                  <rect x="6" y="15" width="12" height="4" fill="#6366F1"/>
+                  <rect x="9" y="19" width="6" height="3" fill="#6366F1"/>
+                  <rect x="7" y="7" width="4" height="2" fill="#FFFFFF"/>
+                  <rect x="7" y="9" width="2" height="4" fill="#FFFFFF"/>
+                  <rect x="7" y="13" width="4" height="2" fill="#FFFFFF"/>
+                  <rect x="13" y="9" width="1" height="5" fill="#38BDF8"/>
+                  <rect x="11" y="11" width="5" height="1" fill="#38BDF8"/>
+                  <rect x="18" y="9" width="1" height="5" fill="#38BDF8"/>
+                  <rect x="16" y="11" width="5" height="1" fill="#38BDF8"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-lang">LANG</span>
+                <span class="pixel-rank-badge rank-expert">LVL 88</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">C++</h3>
+              <p class="skill-role-desc">Systems &bull; High-Performance Computing</p>
+              
+              <!-- Progress Bar: 88% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="C++ Proficiency: 88%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">88%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="88">
+                  <div class="pixel-meter-fill fill-indigo" style="width: 88%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Memory Mgmt</span>
+                <span class="pixel-tag-item">STL Algorithms</span>
+                <span class="pixel-tag-item">Low Latency</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 3: SQL
+               Represents relational database modeling, structured querying,
+               schema indexing, transactional ACID guarantees, and aggregation.
+               - Pixel Icon: Multi-tiered cylindrical database storage disks
+               - Progress Bar: 90% proficiency for complex relational query handling
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="lang" data-skill-id="sql" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: SQL Database Cylinder -->
+              <div class="pixel-icon-frame icon-sql" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="4" width="16" height="4" fill="#06B6D4"/>
+                  <rect x="6" y="3" width="12" height="1" fill="#22D3EE"/>
+                  <rect x="4" y="10" width="16" height="4" fill="#0891B2"/>
+                  <rect x="6" y="9" width="12" height="1" fill="#22D3EE"/>
+                  <rect x="4" y="16" width="16" height="4" fill="#0E7490"/>
+                  <rect x="6" y="15" width="12" height="1" fill="#22D3EE"/>
+                  <rect x="17" y="5" width="2" height="2" fill="#F8FAFC"/>
+                  <rect x="17" y="11" width="2" height="2" fill="#F8FAFC"/>
+                  <rect x="17" y="17" width="2" height="2" fill="#F8FAFC"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-lang">LANG</span>
+                <span class="pixel-rank-badge rank-expert">LVL 90</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">SQL</h3>
+              <p class="skill-role-desc">Relational DB &bull; Complex Joins &amp; Indexing</p>
+              
+              <!-- Progress Bar: 90% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="SQL Proficiency: 90%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">90%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="90">
+                  <div class="pixel-meter-fill fill-teal" style="width: 90%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Schema Design</span>
+                <span class="pixel-tag-item">Aggregations</span>
+                <span class="pixel-tag-item">Query Tuning</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 4: MACHINE LEARNING
+               Represents foundational algorithmic AI: supervised & unsupervised learning,
+               decision trees, regression models, feature selection, and model evaluation.
+               - Pixel Icon: Purple pixelated neural brain graph with glowing nodes
+               - Progress Bar: 92% proficiency in statistical predictive modeling
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="ml" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Machine Learning Brain Graph -->
+              <div class="pixel-icon-frame icon-ml" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="3" width="4" height="4" fill="#A855F7"/>
+                  <rect x="4" y="9" width="4" height="4" fill="#C084FC"/>
+                  <rect x="16" y="9" width="4" height="4" fill="#C084FC"/>
+                  <rect x="6" y="17" width="4" height="4" fill="#8B5CF6"/>
+                  <rect x="14" y="17" width="4" height="4" fill="#8B5CF6"/>
+                  <rect x="8" y="7" width="2" height="2" fill="#DDD6FE"/>
+                  <rect x="14" y="7" width="2" height="2" fill="#DDD6FE"/>
+                  <rect x="10" y="11" width="4" height="2" fill="#DDD6FE"/>
+                  <rect x="8" y="13" width="2" height="4" fill="#DDD6FE"/>
+                  <rect x="14" y="13" width="2" height="4" fill="#DDD6FE"/>
+                  <rect x="11" y="9" width="2" height="4" fill="#EC4899"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-master">LVL 92</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Machine Learning</h3>
+              <p class="skill-role-desc">Predictive Models &bull; Supervised Learning</p>
+              
+              <!-- Progress Bar: 92% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Machine Learning Proficiency: 92%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">92%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="92">
+                  <div class="pixel-meter-fill fill-purple" style="width: 92%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Classification</span>
+                <span class="pixel-tag-item">Feature Eng.</span>
+                <span class="pixel-tag-item">Validation</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 5: DEEP LEARNING
+               Represents deep neural networks, multilayer perceptrons, backpropagation,
+               gradient descent optimization, activation functions, and loss convergence.
+               - Pixel Icon: Multi-tier neural network with interconnected layers
+               - Progress Bar: 90% proficiency in deep architecture training
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="dl" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Deep Learning Multilayer Network -->
+              <div class="pixel-icon-frame icon-dl" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="4" width="3" height="3" fill="#F43F5E"/>
+                  <rect x="3" y="10" width="3" height="3" fill="#F43F5E"/>
+                  <rect x="3" y="16" width="3" height="3" fill="#F43F5E"/>
+                  <rect x="10" y="3" width="3" height="3" fill="#FB7185"/>
+                  <rect x="10" y="8" width="3" height="3" fill="#FB7185"/>
+                  <rect x="10" y="13" width="3" height="3" fill="#FB7185"/>
+                  <rect x="10" y="18" width="3" height="3" fill="#FB7185"/>
+                  <rect x="18" y="7" width="3" height="3" fill="#FDA4AF"/>
+                  <rect x="18" y="14" width="3" height="3" fill="#FDA4AF"/>
+                  <rect x="6" y="5" width="4" height="2" fill="#FFE4E6"/>
+                  <rect x="6" y="11" width="4" height="2" fill="#FFE4E6"/>
+                  <rect x="6" y="17" width="4" height="2" fill="#FFE4E6"/>
+                  <rect x="13" y="9" width="5" height="2" fill="#FFE4E6"/>
+                  <rect x="13" y="15" width="5" height="2" fill="#FFE4E6"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-expert">LVL 90</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Deep Learning</h3>
+              <p class="skill-role-desc">Neural Networks &bull; Backprop &amp; Convergence</p>
+              
+              <!-- Progress Bar: 90% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Deep Learning Proficiency: 90%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">90%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="90">
+                  <div class="pixel-meter-fill fill-rose" style="width: 90%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">DNNs &amp; MLPs</span>
+                <span class="pixel-tag-item">Gradient Descent</span>
+                <span class="pixel-tag-item">Loss Optimization</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 6: NLP (NATURAL LANGUAGE PROCESSING)
+               Represents text preprocessing, tokenization, contextual embeddings,
+               sentiment classification, sequence modeling, and transformer mechanics.
+               - Pixel Icon: Sky blue pixel speech bubble with text tokens & matrix wave
+               - Progress Bar: 88% proficiency in linguistic processing pipelines
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="nlp" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: NLP Speech Matrix -->
+              <div class="pixel-icon-frame icon-nlp" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="12" fill="#0EA5E9"/>
+                  <rect x="5" y="15" width="8" height="3" fill="#0EA5E9"/>
+                  <rect x="5" y="18" width="3" height="3" fill="#0EA5E9"/>
+                  <rect x="6" y="6" width="3" height="2" fill="#FFFFFF"/>
+                  <rect x="11" y="6" width="4" height="2" fill="#FFFFFF"/>
+                  <rect x="17" y="6" width="2" height="2" fill="#FFFFFF"/>
+                  <rect x="6" y="10" width="5" height="2" fill="#BAE6FD"/>
+                  <rect x="13" y="10" width="6" height="2" fill="#BAE6FD"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-expert">LVL 88</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">NLP</h3>
+              <p class="skill-role-desc">Natural Language &bull; Embeddings &amp; Text AI</p>
+              
+              <!-- Progress Bar: 88% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="NLP Proficiency: 88%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">88%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="88">
+                  <div class="pixel-meter-fill fill-cyan" style="width: 88%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Tokenization</span>
+                <span class="pixel-tag-item">Vector Embeds</span>
+                <span class="pixel-tag-item">Transformers</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 7: COMPUTER VISION
+               Represents spatial visual processing, convolutional neural networks (CNNs),
+               image filtering, contour recognition, and sensor/camera visual analysis.
+               - Pixel Icon: Amber cybernetic camera lens with target crosshairs
+               - Progress Bar: 86% proficiency in image feature extraction
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="cv" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Computer Vision Cybernetic Reticle -->
+              <div class="pixel-icon-frame icon-cv" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="5" width="16" height="14" fill="#F59E0B"/>
+                  <rect x="6" y="3" width="6" height="2" fill="#D97706"/>
+                  <rect x="7" y="8" width="10" height="8" fill="#1E293B"/>
+                  <rect x="10" y="10" width="4" height="4" fill="#FBBF24"/>
+                  <rect x="11" y="11" width="2" height="2" fill="#FFFFFF"/>
+                  <rect x="11" y="7" width="2" height="2" fill="#EF4444"/>
+                  <rect x="11" y="15" width="2" height="2" fill="#EF4444"/>
+                  <rect x="5" y="11" width="2" height="2" fill="#EF4444"/>
+                  <rect x="17" y="11" width="2" height="2" fill="#EF4444"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-adv">LVL 86</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Computer Vision</h3>
+              <p class="skill-role-desc">Image Recognition &bull; CNNs &amp; Spatial Tensors</p>
+              
+              <!-- Progress Bar: 86% Advanced Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Computer Vision Proficiency: 86%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">86%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="86">
+                  <div class="pixel-meter-fill fill-amber" style="width: 86%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">CNN Models</span>
+                <span class="pixel-tag-item">Filtering</span>
+                <span class="pixel-tag-item">Image Tensors</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-adv">ADVANCED</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 8: GENERATIVE AI
+               Represents modern frontier AI architectures: large language models (LLMs),
+               RAG (retrieval-augmented generation), prompt engineering, and diffusion.
+               - Pixel Icon: Violet pixelated four-point star with generative sparkles
+               - Progress Bar: 91% proficiency in generative pipelines & agentic flows
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="genai" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Generative AI Sparkle Star -->
+              <div class="pixel-icon-frame icon-genai" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="2" width="4" height="3" fill="#C084FC"/>
+                  <rect x="10" y="11" width="4" height="3" fill="#C084FC"/>
+                  <rect x="2" y="6" width="3" height="4" fill="#C084FC"/>
+                  <rect x="19" y="6" width="3" height="4" fill="#C084FC"/>
+                  <rect x="7" y="5" width="10" height="6" fill="#A855F7"/>
+                  <rect x="10" y="6" width="4" height="4" fill="#FFFFFF"/>
+                  <rect x="4" y="17" width="2" height="2" fill="#E879F9"/>
+                  <rect x="18" y="16" width="3" height="3" fill="#E879F9"/>
+                  <rect x="13" y="19" width="2" height="2" fill="#F472B6"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-master">LVL 91</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Generative AI</h3>
+              <p class="skill-role-desc">LLMs &bull; RAG Architectures &amp; Prompt Systems</p>
+              
+              <!-- Progress Bar: 91% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Generative AI Proficiency: 91%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">91%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="91">
+                  <div class="pixel-meter-fill fill-purple" style="width: 91%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">LLM Pipelines</span>
+                <span class="pixel-tag-item">RAG Systems</span>
+                <span class="pixel-tag-item">Prompt Eng.</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 9: PYTORCH
+               Represents dynamic computation graphs, CUDA GPU tensor acceleration,
+               deep learning research implementation, and custom neural layer training.
+               - Pixel Icon: Vibrant orange pixel torch flame with ember particles
+               - Progress Bar: 93% proficiency in neural model training and evaluation
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="frameworks" data-skill-id="pytorch" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: PyTorch Torch Flame -->
+              <div class="pixel-icon-frame icon-pytorch" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="11" y="3" width="3" height="3" fill="#FB923C"/>
+                  <rect x="9" y="6" width="7" height="4" fill="#EA580C"/>
+                  <rect x="8" y="10" width="8" height="5" fill="#EE2C1B"/>
+                  <rect x="10" y="8" width="3" height="4" fill="#FBBF24"/>
+                  <rect x="10" y="15" width="4" height="5" fill="#7C2D12"/>
+                  <rect x="17" y="4" width="2" height="2" fill="#EA580C"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-frame">FRAMEWORK</span>
+                <span class="pixel-rank-badge rank-master">LVL 93</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">PyTorch</h3>
+              <p class="skill-role-desc">Deep Learning &bull; Dynamic Tensors &amp; CUDA</p>
+              
+              <!-- Progress Bar: 93% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="PyTorch Proficiency: 93%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">93%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="93">
+                  <div class="pixel-meter-fill fill-amber" style="width: 93%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Autograd</span>
+                <span class="pixel-tag-item">CUDA GPU</span>
+                <span class="pixel-tag-item">Model Training</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 10: TENSORFLOW
+               Represents production deep learning deployments, graph execution,
+               Keras abstraction layers, model serialization, and serving infrastructure.
+               - Pixel Icon: Orange isometric 3D tensor block structure
+               - Progress Bar: 87% proficiency in industrial model lifecycle
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="frameworks" data-skill-id="tensorflow" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: TensorFlow Isometric Tensor -->
+              <div class="pixel-icon-frame icon-tf" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="4" width="14" height="4" fill="#FF8A00"/>
+                  <rect x="10" y="8" width="4" height="12" fill="#E65100"/>
+                  <rect x="5" y="8" width="4" height="6" fill="#FFB74D"/>
+                  <rect x="15" y="8" width="4" height="6" fill="#FF6D00"/>
+                  <rect x="15" y="14" width="4" height="6" fill="#DD2C00"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-frame">FRAMEWORK</span>
+                <span class="pixel-rank-badge rank-expert">LVL 87</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">TensorFlow</h3>
+              <p class="skill-role-desc">Production ML &bull; Keras &amp; Graph Execution</p>
+              
+              <!-- Progress Bar: 87% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="TensorFlow Proficiency: 87%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">87%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="87">
+                  <div class="pixel-meter-fill fill-amber" style="width: 87%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Keras APIs</span>
+                <span class="pixel-tag-item">SavedModel</span>
+                <span class="pixel-tag-item">Distributed ML</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 11: SCIKIT-LEARN
+               Represents classical machine learning pipelines, preprocessing transformers,
+               decision boundaries, clustering metrics, cross-validation, and grid search.
+               - Pixel Icon: Cyan/orange scatter plot decision boundary matrix
+               - Progress Bar: 92% proficiency in statistical data science pipelines
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="frameworks" data-skill-id="sklearn" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Scikit-learn Decision Boundary -->
+              <div class="pixel-icon-frame icon-sklearn" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="2" height="18" fill="#94A3B8"/>
+                  <rect x="3" y="19" width="18" height="2" fill="#94A3B8"/>
+                  <rect x="6" y="15" width="3" height="3" fill="#38BDF8"/>
+                  <rect x="9" y="12" width="3" height="3" fill="#38BDF8"/>
+                  <rect x="7" y="9" width="3" height="3" fill="#38BDF8"/>
+                  <rect x="13" y="8" width="3" height="3" fill="#F97316"/>
+                  <rect x="17" y="5" width="3" height="3" fill="#F97316"/>
+                  <rect x="16" y="11" width="3" height="3" fill="#F97316"/>
+                  <rect x="11" y="4" width="2" height="14" fill="#FCD34D"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-frame">FRAMEWORK</span>
+                <span class="pixel-rank-badge rank-master">LVL 92</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Scikit-learn</h3>
+              <p class="skill-role-desc">ML Toolkits &bull; Pipelines &amp; Model Selection</p>
+              
+              <!-- Progress Bar: 92% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Scikit-learn Proficiency: 92%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">92%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="92">
+                  <div class="pixel-meter-fill fill-cyan" style="width: 92%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Pipelines</span>
+                <span class="pixel-tag-item">Preprocessing</span>
+                <span class="pixel-tag-item">Cross-Val</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 12: FASTAPI
+               Represents modern asynchronous Python backend development, RESTful APIs,
+               Pydantic type contracts, OpenAPI documentation, and high-concurrency microservices.
+               - Pixel Icon: Teal lightning bolt symbol of lightning-fast async performance
+               - Progress Bar: 90% proficiency in building production API endpoints
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="frameworks" data-skill-id="fastapi" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: FastAPI Lightning Surge -->
+              <div class="pixel-icon-frame icon-fastapi" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="12" y="2" width="4" height="4" fill="#14B8A6"/>
+                  <rect x="10" y="6" width="4" height="3" fill="#14B8A6"/>
+                  <rect x="7" y="9" width="9" height="3" fill="#2DD4BF"/>
+                  <rect x="8" y="12" width="5" height="3" fill="#2DD4BF"/>
+                  <rect x="7" y="15" width="4" height="3" fill="#14B8A6"/>
+                  <rect x="6" y="18" width="3" height="4" fill="#0D9488"/>
+                  <rect x="11" y="8" width="2" height="2" fill="#CCFBF1"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-frame">FRAMEWORK</span>
+                <span class="pixel-rank-badge rank-expert">LVL 90</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">FastAPI</h3>
+              <p class="skill-role-desc">Async REST APIs &bull; Microservices &amp; Pydantic</p>
+              
+              <!-- Progress Bar: 90% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="FastAPI Proficiency: 90%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">90%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="90">
+                  <div class="pixel-meter-fill fill-teal" style="width: 90%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Async / Await</span>
+                <span class="pixel-tag-item">Pydantic Schemas</span>
+                <span class="pixel-tag-item">OpenAPI Spec</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 13: PANDAS
+               Represents structured data manipulation, DataFrames, ETL wrangling,
+               time-series analysis, aggregation grouping, and tabular data cleansing.
+               - Pixel Icon: Indigo pixelated data grid spreadsheet table
+               - Progress Bar: 94% proficiency in analytical data manipulation
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="tools" data-skill-id="pandas" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Pandas DataFrame Grid -->
+              <div class="pixel-icon-frame icon-pandas" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="18" fill="#1E1B4B"/>
+                  <rect x="4" y="4" width="16" height="4" fill="#818CF8"/>
+                  <rect x="4" y="9" width="5" height="5" fill="#4338CA"/>
+                  <rect x="10" y="9" width="10" height="5" fill="#6366F1"/>
+                  <rect x="4" y="15" width="5" height="5" fill="#4338CA"/>
+                  <rect x="10" y="15" width="10" height="5" fill="#4F46E5"/>
+                  <rect x="13" y="10" width="3" height="3" fill="#A5B4FC"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-tool">DATA / TOOL</span>
+                <span class="pixel-rank-badge rank-master">LVL 94</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Pandas</h3>
+              <p class="skill-role-desc">Data Wrangling &bull; DataFrames &amp; ETL Pipelines</p>
+              
+              <!-- Progress Bar: 94% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Pandas Proficiency: 94%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">94%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="94">
+                  <div class="pixel-meter-fill fill-indigo" style="width: 94%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">DataFrames</span>
+                <span class="pixel-tag-item">ETL Cleaning</span>
+                <span class="pixel-tag-item">Groupby &amp; Pivot</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 14: NUMPY
+               Represents vectorized multi-dimensional numerical computing, N-d arrays,
+               linear algebra matrices, Fourier transforms, and memory-efficient math.
+               - Pixel Icon: Sky blue 3D isometric tensor matrix cube
+               - Progress Bar: 92% proficiency in vectorized numerical processing
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="tools" data-skill-id="numpy" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: NumPy N-Dimensional Matrix -->
+              <div class="pixel-icon-frame icon-numpy" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="4" width="6" height="6" fill="#38BDF8"/>
+                  <rect x="14" y="4" width="6" height="6" fill="#0284C7"/>
+                  <rect x="4" y="14" width="6" height="6" fill="#0EA5E9"/>
+                  <rect x="14" y="14" width="6" height="6" fill="#38BDF8"/>
+                  <rect x="6" y="6" width="2" height="2" fill="#FFFFFF"/>
+                  <rect x="16" y="6" width="2" height="2" fill="#BAE6FD"/>
+                  <rect x="6" y="16" width="2" height="2" fill="#BAE6FD"/>
+                  <rect x="16" y="16" width="2" height="2" fill="#FFFFFF"/>
+                  <rect x="10" y="10" width="4" height="4" fill="#0369A1"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-tool">DATA / TOOL</span>
+                <span class="pixel-rank-badge rank-master">LVL 92</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">NumPy</h3>
+              <p class="skill-role-desc">Numerical Math &bull; Vectorized N-D Arrays</p>
+              
+              <!-- Progress Bar: 92% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="NumPy Proficiency: 92%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">92%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="92">
+                  <div class="pixel-meter-fill fill-cyan" style="width: 92%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Vectorization</span>
+                <span class="pixel-tag-item">Linear Algebra</span>
+                <span class="pixel-tag-item">Broadcasting</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 15: GIT
+               Represents distributed version control, atomic commits, branching
+               strategies, merge resolution, rebase hygiene, and local repo architecture.
+               - Pixel Icon: Rose pixel branching tree with commit graph nodes
+               - Progress Bar: 91% proficiency in source tree control & hygiene
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="tools" data-skill-id="git" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Git Branching Commit Graph -->
+              <div class="pixel-icon-frame icon-git" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6" y="4" width="4" height="4" fill="#F43F5E"/>
+                  <rect x="7" y="8" width="2" height="8" fill="#F43F5E"/>
+                  <rect x="6" y="16" width="4" height="4" fill="#F43F5E"/>
+                  <rect x="9" y="10" width="4" height="2" fill="#FB7185"/>
+                  <rect x="13" y="8" width="2" height="4" fill="#FB7185"/>
+                  <rect x="14" y="6" width="4" height="4" fill="#F43F5E"/>
+                  <rect x="14" y="14" width="4" height="4" fill="#FDA4AF"/>
+                  <rect x="15" y="10" width="2" height="4" fill="#FB7185"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-tool">DATA / TOOL</span>
+                <span class="pixel-rank-badge rank-master">LVL 91</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Git</h3>
+              <p class="skill-role-desc">Version Control &bull; Branch Workflows &amp; Rebasing</p>
+              
+              <!-- Progress Bar: 91% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Git Proficiency: 91%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">91%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="91">
+                  <div class="pixel-meter-fill fill-rose" style="width: 91%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Branching</span>
+                <span class="pixel-tag-item">Merge Conflict</span>
+                <span class="pixel-tag-item">Rebase &amp; Log</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 16: GITHUB
+               Represents collaborative engineering: pull request reviews, CI/CD automated
+               actions, issue management, release staging, and open source collaboration.
+               - Pixel Icon: Silver pixel Octocat silhouette with kitty ears
+               - Progress Bar: 93% proficiency in remote repository collaboration
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="tools" data-skill-id="github" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: GitHub Octocat Silhouette -->
+              <div class="pixel-icon-frame icon-github" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="4" width="3" height="3" fill="#E2E8F0"/>
+                  <rect x="16" y="4" width="3" height="3" fill="#E2E8F0"/>
+                  <rect x="6" y="7" width="12" height="10" fill="#E2E8F0"/>
+                  <rect x="8" y="17" width="8" height="3" fill="#E2E8F0"/>
+                  <rect x="8" y="10" width="2" height="2" fill="#0F172A"/>
+                  <rect x="14" y="10" width="2" height="2" fill="#0F172A"/>
+                  <rect x="10" y="13" width="4" height="2" fill="#94A3B8"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-tool">DATA / TOOL</span>
+                <span class="pixel-rank-badge rank-master">LVL 93</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">GitHub</h3>
+              <p class="skill-role-desc">Collaboration &bull; CI/CD Pipelines &amp; PRs</p>
+              
+              <!-- Progress Bar: 93% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="GitHub Proficiency: 93%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">93%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="93">
+                  <div class="pixel-meter-fill fill-indigo" style="width: 93%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Pull Requests</span>
+                <span class="pixel-tag-item">GitHub Actions</span>
+                <span class="pixel-tag-item">Code Review</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+        </div>
+        <!-- End Main Skills Grid -->
+
+        <!-- ========================================================
+             INTERACTIVE RETRO SKILL INSPECTOR HUD & TERMINAL
+             Allows user to click or hover any skill card to examine
+             in-depth software engineering telemetry, benchmark metrics,
+             and live syntax snippets.
+             ======================================================== -->
+        <aside class="pixel-inspector-hud" id="pixel-inspector" aria-label="Skill Detail Inspector">
+          <div class="inspector-header">
+            <div class="inspector-title-wrap">
+              <span class="inspector-dot red"></span>
+              <span class="inspector-dot yellow"></span>
+              <span class="inspector-dot green"></span>
+              <span class="inspector-title">[RETRO TERMINAL: SKILL_INSPECTOR.EXE]</span>
+            </div>
+            <div class="inspector-action-status">
+              <span class="pixel-blink-text">&bull; READY</span>
+            </div>
+          </div>
+
+          <div class="inspector-body">
+            <!-- Left Info Pane -->
+            <div class="inspector-left">
+              <div class="inspector-hero">
+                <div class="inspector-icon-wrap" id="inspector-icon-display">
+                  <!-- Injected via JS -->
+                </div>
+                <div class="inspector-title-block">
+                  <span class="inspector-kicker" id="inspector-category-kicker">CORE LANGUAGE</span>
+                  <h3 class="inspector-skill-title" id="inspector-skill-title">Python</h3>
+                  <div class="inspector-meta-pills">
+                    <span class="pixel-pill" id="inspector-rank-pill">RANK: MASTER</span>
+                    <span class="pixel-pill text-cyan" id="inspector-level-pill">LVL: 95/100</span>
+                    <span class="pixel-pill" id="inspector-status-pill">STATUS: EQUIPPED</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="inspector-desc" id="inspector-desc">
+                Primary multi-paradigm language applied in developing high-throughput AI pipelines, asynchronous REST APIs, and automated sensor data streaming architectures.
+              </p>
+
+              <!-- Real-world Application Checklist -->
+              <div class="inspector-competencies">
+                <span class="inspector-subhead">ENGINEERING PROFICIENCIES:</span>
+                <ul class="inspector-checklist" id="inspector-checklist">
+                  <li>Dynamic object-oriented programming &amp; clean modular modules</li>
+                  <li>Deep learning model training and hyperparameter search</li>
+                  <li>High-performance asynchronous data fetching &amp; stream processing</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Telemetry & Benchmark Pane -->
+            <div class="inspector-right">
+              <span class="inspector-subhead">BENCHMARK METRICS &bull; 8-BIT TELEMETRY</span>
+              <div class="inspector-metrics-grid">
+                <div class="inspector-stat">
+                  <div class="inspector-stat-header">
+                    <span>PRODUCTION READINESS</span>
+                    <span id="metric-prod">96%</span>
+                  </div>
+                  <div class="pixel-mini-meter">
+                    <div class="pixel-mini-fill" id="metric-prod-fill" style="width: 96%;"></div>
+                  </div>
+                </div>
+                <div class="inspector-stat">
+                  <div class="inspector-stat-header">
+                    <span>ALGORITHMIC DEPTH</span>
+                    <span id="metric-algo">94%</span>
+                  </div>
+                  <div class="pixel-mini-meter">
+                    <div class="pixel-mini-fill fill-purple" id="metric-algo-fill" style="width: 94%;"></div>
+                  </div>
+                </div>
+                <div class="inspector-stat">
+                  <div class="inspector-stat-header">
+                    <span>SYSTEM OPTIMIZATION</span>
+                    <span id="metric-opt">92%</span>
+                  </div>
+                  <div class="pixel-mini-meter">
+                    <div class="pixel-mini-fill fill-amber" id="metric-opt-fill" style="width: 92%;"></div>
+                  </div>
+                </div>
+                <div class="inspector-stat">
+                  <div class="inspector-stat-header">
+                    <span>TEST &amp; CLEAN CODE</span>
+                    <span id="metric-clean">98%</span>
+                  </div>
+                  <div class="pixel-mini-meter">
+                    <div class="pixel-mini-fill fill-teal" id="metric-clean-fill" style="width: 98%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terminal Code Preview Snippet -->
+              <div class="inspector-code-box">
+                <div class="inspector-code-header">
+                  <span class="code-tab-name" id="inspector-code-filename">python_pipeline.py</span>
+                  <button id="inspector-run-test-btn" class="pixel-run-btn" title="Run simulated test">
+                    <span>▶ RUN TEST</span>
+                  </button>
+                </div>
+                <pre class="inspector-code-pre"><code id="inspector-code-snippet"><span class="token-keyword">import</span> torch, asyncio
+<span class="token-keyword">from</span> pydantic <span class="token-keyword">import</span> BaseModel
+
+<span class="token-keyword">class</span> <span class="token-type">InferencePipeline</span>:
+    <span class="token-keyword">def</span> <span class="token-function">__init__</span>(self, model_name: str):
+        self.device = <span class="token-string">"cuda"</span> <span class="token-keyword">if</span> torch.cuda.is_available() <span class="token-keyword">else</span> <span class="token-string">"cpu"</span>
+        self.engine = load_weights(model_name).to(self.device)
+
+    <span class="token-keyword">async def</span> <span class="token-function">predict</span>(self, tensor_payload):
+        <span class="token-keyword">return</span> <span class="token-keyword">await</span> self.engine.forward(tensor_payload)</code></pre>
+                <div class="inspector-terminal-log" id="inspector-log" style="display: none;">
+                  <span class="log-cursor">&gt;</span> <span id="inspector-log-text">Running validation test... OK! [0.012s]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- End Interactive Retro Skill Inspector HUD -->
+
+      </div>
+    </section>
+    <!-- SKILLS SECTION END -->
+
+
+    <!-- ========================================================
+         4. TIMELINE / EDUCATION SECTION
+         Education milestones, technical projects, and journey
+         ======================================================== -->
+    <!-- TIMELINE SECTION START -->
+    <section class="timeline-section section-padding" id="timeline" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Academic &amp; Career Path</span>
+          <h2 id="timeline-title" class="section-title">Education &amp; <span class="gradient-text">Milestones</span></h2>
+          <p class="section-lead">A chronological journey of engineering education, technological innovations, and academic milestones.</p>
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- Timeline Item 1: B.E. Degree (Currently Pursuing - 2nd Year) -->
+          <article class="timeline-item current-milestone">
+            <div class="timeline-marker active-marker" aria-hidden="true">
+              <span class="marker-pulse"></span>
+            </div>
+            <div class="timeline-content rounded-card">
+              <div class="timeline-header-meta">
+                <span class="timeline-category-badge badge-active">🎓 HIGHER EDUCATION</span>
+                <div class="timeline-badge-group">
+                  <span class="timeline-status-pill ongoing">
+                    <span class="pulse-dot" aria-hidden="true"></span> Currently Pursuing (2nd Year)
+                  </span>
+                  <span class="timeline-date">2025 — 2029 (Expected)</span>
+                </div>
+              </div>
+
+              <h3 class="timeline-role">Bachelor of Engineering (B.E.) &bull; Artificial Intelligence &amp; Machine Learning</h3>
+              <h4 class="timeline-company">Adichunchanagiri Institute of Technology (AIT), Chikkamagaluru</h4>
+              
+              <p class="timeline-desc">
+                Currently in 2nd Year of B.E. specializing in <strong>Artificial Intelligence &amp; Machine Learning (AI &amp; ML)</strong>. Developing strong competencies in deep learning architectures, neural networks, natural language processing, computer vision, data structures, and production-grade software engineering. Graduating in 2029.
+              </p>
+
+              <div class="timeline-tags">
+                <span class="mini-tag highlight">AI &amp; Machine Learning</span>
+                <span class="mini-tag">Deep Learning</span>
+                <span class="mini-tag">Data Structures</span>
+                <span class="mini-tag">Algorithms</span>
+                <span class="mini-tag">Python &bull; C++</span>
+                <span class="mini-tag">Adichunchanagiri Institute of Technology</span>
+                <span class="mini-tag">Graduating 2029</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 2: Major Technical Project (Rain Detection System) -->
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content rounded-card">
+              <div class="timeline-header-meta">
+                <span class="timeline-category-badge badge-project">🚀 MAJOR PROJECT</span>
+                <span class="timeline-date">2024 — 2025</span>
+              </div>
+
+              <h3 class="timeline-role">Rain Detection and Alert System</h3>
+              <h4 class="timeline-company">Academic Technical Innovation Project</h4>
+              
+              <p class="timeline-desc">
+                Engineered an automated sensor-based alert system that detects precipitation in real time and triggers immediate alert warnings. Programmed hardware sensor-to-software logic to deliver dependable hazard notifications.
+              </p>
+
+              <div class="timeline-tags">
+                <span class="mini-tag">IoT Sensors</span>
+                <span class="mini-tag">Hardware Interfacing</span>
+                <span class="mini-tag">Python</span>
+                <span class="mini-tag">C</span>
+                <span class="mini-tag">Real-Time Alert Logic</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 3: Pre-University Education (Raghavendra Hi-Tech PU College) -->
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content rounded-card">
+              <div class="timeline-header-meta">
+                <span class="timeline-category-badge badge-edu">📚 PRE-UNIVERSITY</span>
+                <div class="timeline-badge-group">
+                  <span class="timeline-status-pill completed">Completed (76%)</span>
+                  <span class="timeline-date">2023 — 2025</span>
+                </div>
+              </div>
+
+              <h3 class="timeline-role">Pre-University Course (Second PUC) &bull; Science &amp; Computer Science</h3>
+              <h4 class="timeline-company">Raghavendra Hi-Tech PU College, Davanagere</h4>
+              
+              <p class="timeline-desc">
+                Completed Pre-University education in the Science stream with Computer Science specialization (76% Distinction). Built foundational rigor in Computer Science, Mathematics, Physics, and analytical programming logic.
+              </p>
+
+              <div class="timeline-tags">
+                <span class="mini-tag">Computer Science</span>
+                <span class="mini-tag">Mathematics</span>
+                <span class="mini-tag">Physics</span>
+                <span class="mini-tag">Object-Oriented Logic</span>
+                <span class="mini-tag">CGPA: 76%</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 4: Secondary School Education (KRCR School) -->
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content rounded-card">
+              <div class="timeline-header-meta">
+                <span class="timeline-category-badge badge-school">🏫 SECONDARY SCHOOL</span>
+                <div class="timeline-badge-group">
+                  <span class="timeline-status-pill completed">Completed (79%)</span>
+                  <span class="timeline-date">2021 — 2023</span>
+                </div>
+              </div>
+
+              <h3 class="timeline-role">Secondary School Examination (SSLC / 10th Standard)</h3>
+              <h4 class="timeline-company">KRCR School, Chikkamadal, Channagiri</h4>
+              
+              <p class="timeline-desc">
+                Graduated 10th standard with strong scholastic achievement (79%). Cultivated early scientific reasoning, mathematical problem-solving, and a deep-rooted passion for technology and computing.
+              </p>
+
+              <div class="timeline-tags">
+                <span class="mini-tag">General Science</span>
+                <span class="mini-tag">Mathematics</span>
+                <span class="mini-tag">Analytical Reasoning</span>
+                <span class="mini-tag">CGPA: 79%</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- TIMELINE SECTION END -->
+
+
+    <!-- ========================================================
+         5. PROJECTS SECTION
+         Featured software projects, engineering works, and case studies
+         ======================================================== -->
+    <!-- PROJECTS SECTION START -->
+    <section class="projects-section section-padding" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Portfolio</span>
+          <h2 id="projects-title" class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project Card 1: Rain Detection System -->
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="preview-placeholder">
+                <span class="project-badge">Featured IoT Project</span>
+                <span class="preview-icon">🌧️</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Rain Detection and Alert System</h3>
+              <p class="project-description">
+                Designed a sensor-driven embedded alert mechanism capable of accurately detecting precipitation in real time and automatically sounding alerts to prevent water damage and warn local residents.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">C</span>
+                <span class="tag">Sensors</span>
+                <span class="tag">Automation</span>
+              </div>
+              <div class="project-actions">
+                <a href="#about" class="project-btn" aria-label="View project details in About section">Project Overview &rarr;</a>
+                <a href="resume2.pdf" class="project-btn secondary" download="Tanuja_MC_Resume.pdf" aria-label="Download resume for project info">Resume Details &#8599;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2: Interactive Web Portfolio -->
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="preview-placeholder">
+                <span class="project-badge">Web Engineering</span>
+                <span class="preview-icon">💻</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Modern Minimalist Developer Portfolio</h3>
+              <p class="project-description">
+                An ultra-responsive, accessible personal portfolio website built with semantic HTML5, modern vanilla CSS with CSS variables, auto night mode detection, and rich micro-interactions.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive UI</span>
+              </div>
+              <div class="project-actions">
+                <a href="#hero" class="project-btn" aria-label="View live demo">Live Site &uarr;</a>
+                <a href="#contact" class="project-btn secondary" aria-label="Connect for source code">Inquire &#8599;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3: Algorithmic Logic Suite -->
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="preview-placeholder">
+                <span class="project-badge">Algorithms &amp; OOP</span>
+                <span class="preview-icon">🧩</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Data Structures &amp; OOP Algorithms Suite</h3>
+              <p class="project-description">
+                A structured collection of algorithms, object-oriented design solutions, and modular data processing utilities implemented across Java and Python with clean code practices.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tag">Java</span>
+                <span class="tag">Python</span>
+                <span class="tag">OOP</span>
+                <span class="tag">Data Structures</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View on GitHub">GitHub &rarr;</a>
+                <a href="#contact" class="project-btn secondary" aria-label="Discuss algorithms with Tanuja">Contact &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECTS SECTION END -->
+
+
+    <!-- ========================================================
+         6. CONTACT SECTION
+         Inquiry form, contact info, and reach out channels
+         ======================================================== -->
+    <!-- CONTACT SECTION START -->
+    <section class="contact-section section-padding" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 id="contact-title" class="section-title">Let's Connect &amp; Collaborate</h2>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-details">
+            <h3>Contact Information</h3>
+            <p>
+              I am open to software engineering internships, entry-level developer positions, and technical collaborations. Feel free to reach out via phone, email, or LinkedIn!
+            </p>
+            <div class="contact-methods">
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:+917019782364">+91 7019782364</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <p>Channagiri, Davanagere, Karnataka, India</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">💼</span>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <p><a href="https://www.linkedin.com/in/tanuja-chandranaik-583415441" target="_blank" rel="noopener noreferrer">tanuja-chandranaik-583415441</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📄</span>
+                <div>
+                  <strong>Resume</strong>
+                  <p><a href="resume2.pdf" download="Tanuja_MC_Resume.pdf">Download Resume (PDF)</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Placeholder -->
+          <form class="contact-form" id="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you, Tanuja will get back to you shortly!');">
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="your.email@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Hello Tanuja, I would like to discuss an opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btn-submit-contact">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT SECTION END -->
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER SECTION
+       Copyright, quick links, back to top button
+       ======================================================== -->
+  <!-- FOOTER SECTION START -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="copyright">&copy; <span id="current-year">2026</span> Tanuja M C. All rights reserved.</p>
+        <p class="footer-subtext">Software Engineer &bull; Clean Architecture &amp; Modern Web.</p>
+      </div>
+
+      <div class="footer-right">
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="#hero">Back to Top &uarr;</a></li>
+            <li><a href="https://www.linkedin.com/in/tanuja-chandranaik-583415441" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="resume2.pdf" download="Tanuja_MC_Resume.pdf">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER SECTION END -->
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

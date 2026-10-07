@@ -1,0 +1,5197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Tanuja M C — Software Engineer specializing in Java, Python, C, IoT sensor-based alert systems, and modern web applications.">
+  <meta name="keywords" content="Tanuja M C, Software Engineer, Java, Python, C, IoT, Web Development, Portfolio">
+  <meta name="author" content="Tanuja M C">
+  <title>Tanuja M C | Software Engineer Portfolio</title>
+  
+  <!-- Modern Clean Typography: Outfit (Headings) & Inter (Body) + Pixel Art Fonts: Silkscreen & Press Start 2P -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <style>
+/* EMBEDDED COMPLETE STYLESHEET */
+/* ========================================================
+   DESIGN SYSTEM & CSS VARIABLES - MINIMAL PROFESSIONAL THEME
+   - CSS Media Queries automatically detect user's default browser theme
+   - Manual overrides supported via [data-theme="dark"] and [data-theme="light"]
+   - Clean, refined typography, subtle glassmorphism, and elegant contrast
+   ======================================================== */
+:root {
+  /* Typography & Geometry */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', var(--font-sans);
+  --font-code: 'Consolas', 'Fira Code', 'Monaco', monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Fallback Base (Dark Theme by default) */
+  --bg-primary: #0a0e17;
+  --bg-secondary: #111827;
+  --bg-surface: rgba(17, 24, 39, 0.75);
+  --bg-surface-hover: rgba(31, 41, 55, 0.9);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.16);
+  --border-focus: rgba(99, 102, 241, 0.5);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --accent-primary: #6366f1;
+  --accent-primary-hover: #4f46e5;
+  --accent-secondary: #06b6d4;
+  --accent-glow: rgba(99, 102, 241, 0.25);
+
+  --gradient-brand: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+
+  --hero-overlay-start: rgba(10, 14, 23, 0.88);
+  --hero-overlay-end: rgba(17, 24, 39, 0.92);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.2);
+
+  /* Pixel Art Design Tokens */
+  --font-pixel: 'Silkscreen', 'Press Start 2P', monospace;
+  --pixel-border-color: rgba(255, 255, 255, 0.12);
+  --pixel-card-bg: rgba(17, 24, 39, 0.72);
+  --pixel-card-hover-bg: rgba(24, 34, 53, 0.9);
+  --pixel-hud-bg: rgba(13, 19, 33, 0.85);
+  --pixel-slot-bg: rgba(0, 0, 0, 0.55);
+  --pixel-accent-cyan: #06b6d4;
+  --pixel-accent-indigo: #6366f1;
+  --pixel-accent-purple: #a855f7;
+  --pixel-accent-amber: #f59e0b;
+  --pixel-accent-rose: #f43f5e;
+  --pixel-accent-teal: #14b8a6;
+}
+
+/* ========================================================
+   1. CSS MEDIA QUERIES: DEFAULT BROWSER THEME DETECTION
+   Automatically detects user's system / browser preference
+   ======================================================== */
+
+/* Dark Mode: When user's browser default prefers dark */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #111827;
+    --bg-surface: rgba(17, 24, 39, 0.75);
+    --bg-surface-hover: rgba(31, 41, 55, 0.9);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.16);
+    --border-focus: rgba(99, 102, 241, 0.5);
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --accent-primary: #6366f1;
+    --accent-primary-hover: #4f46e5;
+    --accent-secondary: #06b6d4;
+    --accent-glow: rgba(99, 102, 241, 0.25);
+
+    --gradient-brand: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+
+    --hero-overlay-start: rgba(10, 14, 23, 0.88);
+    --hero-overlay-end: rgba(17, 24, 39, 0.92);
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.2);
+  }
+
+  /* Sync Night Mode Icon when no manual override exists */
+  :root:not([data-theme="light"]) .sun-icon {
+    display: inline-block;
+  }
+  :root:not([data-theme="light"]) .moon-icon {
+    display: none;
+  }
+}
+
+/* Light Mode: When user's browser default prefers light */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-surface: rgba(255, 255, 255, 0.85);
+    --bg-surface-hover: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --border-hover: rgba(0, 0, 0, 0.14);
+    --border-focus: rgba(79, 70, 229, 0.4);
+
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+
+    --accent-primary: #4f46e5;
+    --accent-primary-hover: #4338ca;
+    --accent-secondary: #0891b2;
+    --accent-glow: rgba(79, 70, 229, 0.15);
+
+    --gradient-card: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.07);
+    --shadow-glow: 0 0 20px rgba(79, 70, 229, 0.12);
+
+    --hero-overlay-start: rgba(248, 250, 252, 0.9);
+    --hero-overlay-end: rgba(241, 245, 249, 0.94);
+
+    --pixel-border-color: rgba(0, 0, 0, 0.12);
+    --pixel-card-bg: #ffffff;
+    --pixel-card-hover-bg: #f8fafc;
+    --pixel-hud-bg: #f1f5f9;
+    --pixel-slot-bg: rgba(0, 0, 0, 0.08);
+  }
+
+  /* Sync Night Mode Icon when no manual override exists */
+  :root:not([data-theme="dark"]) .sun-icon {
+    display: none;
+  }
+  :root:not([data-theme="dark"]) .moon-icon {
+    display: inline-block;
+  }
+}
+
+/* ========================================================
+   2. MANUAL THEME OVERRIDES (via data-theme attribute)
+   Allows user to toggle regardless of system default
+   ======================================================== */
+[data-theme="dark"] {
+  --bg-primary: #0a0e17;
+  --bg-secondary: #111827;
+  --bg-surface: rgba(17, 24, 39, 0.75);
+  --bg-surface-hover: rgba(31, 41, 55, 0.9);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.16);
+  --border-focus: rgba(99, 102, 241, 0.5);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --accent-primary: #6366f1;
+  --accent-primary-hover: #4f46e5;
+  --accent-secondary: #06b6d4;
+  --accent-glow: rgba(99, 102, 241, 0.25);
+
+  --gradient-brand: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+
+  --hero-overlay-start: rgba(10, 14, 23, 0.88);
+  --hero-overlay-end: rgba(17, 24, 39, 0.92);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+[data-theme="dark"] .sun-icon {
+  display: inline-block !important;
+}
+[data-theme="dark"] .moon-icon {
+  display: none !important;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-surface: rgba(255, 255, 255, 0.85);
+  --bg-surface-hover: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.14);
+  --border-focus: rgba(79, 70, 229, 0.4);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --accent-primary: #4f46e5;
+  --accent-primary-hover: #4338ca;
+  --accent-secondary: #0891b2;
+  --accent-glow: rgba(79, 70, 229, 0.15);
+
+  --gradient-card: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.07);
+  --shadow-glow: 0 0 20px rgba(79, 70, 229, 0.12);
+
+  --hero-overlay-start: rgba(248, 250, 252, 0.9);
+  --hero-overlay-end: rgba(241, 245, 249, 0.94);
+
+  --pixel-border-color: rgba(0, 0, 0, 0.12);
+  --pixel-card-bg: #ffffff;
+  --pixel-card-hover-bg: #f8fafc;
+  --pixel-hud-bg: #f1f5f9;
+  --pixel-slot-bg: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .sun-icon {
+  display: none !important;
+}
+[data-theme="light"] .moon-icon {
+  display: inline-block !important;
+}
+
+/* Base & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+/* Typography & Titles */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-subtitle {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: var(--accent-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.gradient-text {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.btn-primary:hover {
+  background: var(--accent-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+/* ========================================================
+   HEADER & NAVIGATION
+   ======================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 13, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="light"] .site-header {
+  background: rgba(248, 250, 252, 0.85);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+}
+
+.brand-logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.logo-bracket {
+  color: var(--accent-primary);
+}
+
+.logo-slash {
+  color: var(--accent-secondary);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.nav-link:hover, .nav-link:focus-visible {
+  color: var(--text-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-primary);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* NIGHT MODE TOGGLE BUTTON */
+.theme-toggle-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.15rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--accent-primary);
+  transform: rotate(15deg);
+}
+
+[data-theme="dark"] .sun-icon {
+  display: inline-block;
+}
+[data-theme="dark"] .moon-icon {
+  display: none;
+}
+
+[data-theme="light"] .sun-icon {
+  display: none;
+}
+[data-theme="light"] .moon-icon {
+  display: inline-block;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.hamburger-bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: var(--transition);
+}
+
+/* ========================================================
+   HERO SECTION - PIXEL ART STYLE DESIGN
+   - Uses provided background image: portfolio.avif
+   - Retro 8-bit RPG dialog boxes, meters, and CRT scanlines
+   - Pixel buttons, terminal window, and status indicators
+   ======================================================== */
+.pixel-hero {
+  position: relative;
+  /* Background image provided by the user with pixel rendering & theme overlay */
+  background-image: 
+    linear-gradient(var(--pixel-overlay), var(--pixel-overlay)),
+    url('portfolio.avif');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  padding: 3.5rem 0 5rem 0;
+  border-bottom: 4px solid var(--pixel-border);
+  overflow: hidden;
+}
+
+/* Ambient CRT scanline overlay */
+.pixel-scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    var(--scanline-color) 50%,
+    var(--scanline-color)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Top Pixel HUD Bar */
+.pixel-hud-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--pixel-hud-bg);
+  border: 3px solid var(--pixel-border);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.35);
+  padding: 0.6rem 1.25rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  color: var(--pixel-text);
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.05em;
+}
+
+.hud-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hud-indicator {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  display: inline-block;
+  animation: pixelPulse 1.5s infinite steps(2, start);
+}
+
+@keyframes pixelPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+.pixel-btn-hud {
+  font-size: 0.65rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--pixel-btn-sec-bg);
+  color: var(--pixel-text);
+  border: 2px solid var(--pixel-border);
+  box-shadow: 2px 2px 0 #000;
+  cursor: pointer;
+}
+
+.pixel-btn-hud:hover {
+  background: var(--pixel-btn-bg);
+  color: #ffffff;
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+/* Hero Main Grid */
+.pixel-hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.95fr;
+  gap: 2.25rem;
+  position: relative;
+  z-index: 2;
+  align-items: stretch;
+}
+
+/* Reusable Pixel Box Styling */
+.pixel-box {
+  background: var(--pixel-box-bg);
+  border: 4px solid var(--pixel-border);
+  box-shadow: 
+    0 -4px 0 0 var(--pixel-border),
+    0 4px 0 0 var(--pixel-border),
+    -4px 0 0 0 var(--pixel-border),
+    4px 0 0 0 var(--pixel-border),
+    6px 6px 0 0 rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.pixel-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  color: var(--pixel-accent);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px dashed var(--border-color);
+  letter-spacing: 0.05em;
+}
+
+.pixel-version-tag {
+  background: var(--pixel-btn-sec-bg);
+  border: 1px solid var(--pixel-border);
+  padding: 0.2rem 0.45rem;
+  font-size: 0.6rem;
+  color: var(--pixel-text-dim);
+}
+
+/* Welcome Title & Tagline */
+.pixel-hero-title {
+  font-family: var(--font-pixel);
+  font-size: 1.85rem;
+  line-height: 1.35;
+  color: var(--pixel-text);
+  margin-bottom: 1.25rem;
+  text-shadow: 2px 2px 0px var(--pixel-border-shadow);
+  letter-spacing: -0.02em;
+}
+
+.pixel-blink-cursor {
+  color: var(--pixel-accent);
+  animation: blinkCursor 1s steps(2, start) infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.pixel-tagline {
+  font-family: var(--font-retro);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--pixel-text-dim);
+  margin-bottom: 1.5rem;
+}
+
+/* Pixel RPG Stat Meters */
+.pixel-stats-wrapper {
+  background: rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.pixel-stat-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 65px;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-pixel);
+  font-size: 0.62rem;
+  color: var(--pixel-text);
+}
+
+.stat-label {
+  color: var(--pixel-text-dim);
+  white-space: nowrap;
+}
+
+.pixel-bar-frame {
+  height: 12px;
+  background: #000000;
+  border: 2px solid var(--pixel-border);
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.pixel-bar-fill {
+  height: 100%;
+  transition: width 0.5s ease-out;
+}
+
+.hp-fill { background: var(--hp-fill-color); }
+.mp-fill { background: var(--mp-fill-color); }
+.xp-fill { background: var(--xp-fill-color); }
+
+.stat-value {
+  font-size: 0.6rem;
+  text-align: right;
+  color: var(--pixel-accent);
+}
+
+/* Pixel Speech Dialogue Box */
+.pixel-speech-bubble {
+  background: var(--pixel-btn-sec-bg);
+  border-left: 4px solid var(--pixel-accent);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-retro);
+  font-size: 0.95rem;
+  color: var(--pixel-text);
+  margin-bottom: 1.75rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.pixel-quote-icon {
+  font-family: var(--font-pixel);
+  color: var(--pixel-accent);
+  font-size: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+/* Pixel Buttons */
+.pixel-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pixel-btn {
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  padding: 0.85rem 1.25rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 3px solid #000000;
+  box-shadow: 
+    inset -3px -3px 0px 0px rgba(0, 0, 0, 0.45),
+    inset 3px 3px 0px 0px rgba(255, 255, 255, 0.35),
+    4px 4px 0px 0px #000000;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+  image-rendering: pixelated;
+}
+
+.pixel-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 
+    inset -3px -3px 0px 0px rgba(0, 0, 0, 0.45),
+    inset 3px 3px 0px 0px rgba(255, 255, 255, 0.35),
+    2px 2px 0px 0px #000000;
+}
+
+.pixel-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 
+    inset -2px -2px 0px 0px rgba(0, 0, 0, 0.45),
+    inset 2px 2px 0px 0px rgba(255, 255, 255, 0.35),
+    0px 0px 0px 0px #000000;
+}
+
+.pixel-btn-primary {
+  background: var(--pixel-btn-bg);
+  color: var(--pixel-btn-text);
+}
+
+.pixel-btn-primary:hover {
+  background: var(--pixel-btn-hover);
+}
+
+.pixel-btn-secondary {
+  background: var(--pixel-btn-sec-bg);
+  color: var(--pixel-text);
+}
+
+.pixel-btn-secondary:hover {
+  background: var(--border-color);
+}
+
+.pixel-btn-tertiary {
+  background: #10b981;
+  color: #000000;
+}
+
+.pixel-btn-tertiary:hover {
+  background: #059669;
+  color: #ffffff;
+}
+
+.pixel-btn-arrow {
+  font-size: 0.75rem;
+}
+
+/* Right Column: Retro Terminal Screen */
+.pixel-screen-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.pixel-screen-topbar {
+  background: rgba(0, 0, 0, 0.4);
+  margin: -2rem -2rem 1.25rem -2rem;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 3px solid var(--pixel-border);
+}
+
+.pixel-win-btn {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000000;
+  display: inline-block;
+}
+
+.pixel-win-btn.red { background: #ef4444; }
+.pixel-win-btn.yellow { background: #f59e0b; }
+.pixel-win-btn.green { background: #10b981; }
+
+.pixel-screen-title {
+  margin-left: auto;
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  color: var(--pixel-text-dim);
+}
+
+.pixel-terminal-content {
+  background: #000000;
+  border: 3px solid var(--pixel-border);
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.8);
+  padding: 1.25rem;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  overflow-x: auto;
+}
+
+.terminal-line {
+  word-break: break-word;
+}
+
+.t-green { color: #4ade80; font-weight: 600; }
+.t-cyan { color: #38bdf8; }
+.t-yellow { color: #facc15; }
+.t-purple { color: #c084fc; }
+.t-dim { color: #94a3b8; }
+.t-highlight { 
+  color: #f43f5e; 
+  font-weight: 700; 
+  letter-spacing: 0.05em;
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  margin: 0.4rem 0;
+}
+.terminal-divider {
+  color: #334155;
+  letter-spacing: -1px;
+}
+
+.terminal-prompt-line {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.t-cursor {
+  display: inline-block;
+  color: #4ade80;
+  font-weight: 700;
+  animation: blinkCursor 0.8s infinite;
+}
+
+.pixel-terminal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--pixel-accent);
+}
+
+.pixel-badge-bit,
+.pixel-badge-fps {
+  background: var(--pixel-btn-sec-bg);
+  border: 1px solid var(--pixel-border);
+  padding: 0.25rem 0.5rem;
+}
+
+/* ========================================================
+   ABOUT SECTION - CLEAN & MINIMALISTIC DESIGN
+   ======================================================== */
+.section-lead {
+  max-width: 680px;
+  margin: 0.75rem auto 0 auto;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Left Column: Minimal Profile Card */
+.about-image-card {
+  position: sticky;
+  top: 6rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: var(--transition);
+}
+
+.about-image-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.profile-frame {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-image-container:hover .profile-image {
+  transform: scale(1.03);
+}
+
+/* Status Pill Floating Badge */
+.profile-status-pill {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(10, 14, 23, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f8fafc;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  letter-spacing: 0.02em;
+}
+
+[data-theme="light"] .profile-status-pill {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: statusPulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes statusPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.profile-card-details {
+  margin-top: 1.25rem;
+}
+
+.profile-card-name {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+  font-family: var(--font-heading);
+}
+
+.profile-card-role {
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+}
+
+.profile-quick-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.86rem;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.info-icon {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 75px;
+}
+
+.info-value {
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+
+.profile-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.btn-sm {
+  padding: 0.55rem 0.85rem;
+  font-size: 0.82rem;
+  border-radius: var(--radius-full);
+}
+
+/* Right Column: Bio Narrative & Sections */
+.about-bio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.bio-text-block .bio-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.bio-text-block .lead-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.bio-text-block .bio-description {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* Minimal Subheadings */
+.subheading-minimal {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-primary);
+  margin-bottom: 1.1rem;
+  font-family: var(--font-heading);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Career Highlights Minimalist Grid */
+.highlights-container {
+  margin-top: 0.25rem;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.25rem;
+  transition: var(--transition);
+}
+
+.highlight-item:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-surface-hover);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.highlight-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.highlight-item:hover .highlight-icon-box {
+  border-color: var(--accent-primary);
+  transform: scale(1.05);
+}
+
+.highlight-text h5 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--text-primary);
+}
+
+.highlight-text p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Personal Interests Pill Tags */
+.interests-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.interests-container:hover {
+  border-color: var(--border-hover);
+}
+
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.interest-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  cursor: default;
+}
+
+.interest-pill:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.pill-emoji {
+  font-size: 0.95rem;
+}
+
+/* Minimalist Stat Cards */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.stat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 1.35rem 1rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  font-family: var(--font-heading);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* ========================================================
+   3. SKILLS SECTION - PIXEL ART RPG & HUD AESTHETIC
+   Consistent retro gaming / cyberpunk telemetry theme:
+   - Pixel HUD status banners & Web Audio SFX chip
+   - 8-bit chamfered borders & crisp pixel typography
+   - 10-segment stamina progress bars with custom gradients
+   - Interactive category filtering, search, & hover pulses
+   - Dynamic retro skill inspector terminal with live code previews
+   ======================================================== */
+
+/* Pixel Section Header Badge */
+.pixel-badge-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--pixel-slot-bg);
+  border: 1px solid var(--accent-secondary);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.2), inset 0 0 8px rgba(6, 182, 212, 0.1);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.pixel-badge-text {
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  color: var(--accent-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pixel-blink-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-secondary);
+  display: inline-block;
+  animation: pixelBlink 1.2s steps(2, start) infinite;
+}
+
+@keyframes pixelBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.2; transform: scale(0.8); }
+}
+
+/* Pixel Summary HUD Banner */
+.pixel-hud-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1.25rem 1.75rem;
+  background: var(--pixel-hud-bg);
+  border: 2px solid var(--pixel-border-color);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.pixel-hud-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pixel-hud-label {
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.pixel-hud-val {
+  font-family: var(--font-pixel);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.pixel-hud-val.text-cyan {
+  color: var(--pixel-accent-cyan);
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.35);
+}
+
+.pixel-hud-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pixel-btn-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--pixel-slot-bg);
+  border: 1px solid var(--pixel-border-color);
+  color: var(--text-secondary);
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.pixel-btn-chip:hover {
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.4), 0 0 10px rgba(6, 182, 212, 0.2);
+}
+
+.pixel-btn-chip.active-sfx {
+  border-color: var(--pixel-accent-emerald);
+  color: var(--pixel-accent-emerald);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+/* Filter Controls & Search Bar */
+.pixel-filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.pixel-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pixel-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--pixel-border-color);
+  color: var(--text-secondary);
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  padding: 0.6rem 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.pixel-tab-icon {
+  font-size: 0.85rem;
+}
+
+.pixel-tab-count {
+  opacity: 0.7;
+  font-size: 0.65rem;
+}
+
+.pixel-tab:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.pixel-tab.active {
+  background: var(--pixel-slot-bg);
+  border-color: var(--pixel-accent-cyan);
+  color: var(--pixel-accent-cyan);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.4), 0 0 14px rgba(6, 182, 212, 0.3);
+}
+
+.pixel-tab.active::after {
+  content: "▼";
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.55rem;
+  color: var(--pixel-accent-cyan);
+  text-shadow: 0 0 6px rgba(6, 182, 212, 0.5);
+}
+
+/* Command-line Search Box */
+.pixel-search-box {
+  display: flex;
+  align-items: center;
+  background: var(--pixel-slot-bg);
+  border: 1.5px solid var(--pixel-border-color);
+  padding: 0.4rem 0.85rem;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  min-width: 280px;
+  transition: var(--transition);
+}
+
+.pixel-search-box:focus-within {
+  border-color: var(--pixel-accent-cyan);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35), 0 0 12px rgba(6, 182, 212, 0.25);
+}
+
+.pixel-search-prefix {
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  color: var(--pixel-accent-cyan);
+  margin-right: 0.5rem;
+  user-select: none;
+}
+
+.pixel-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+.pixel-search-input::placeholder {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.pixel-search-clear {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  line-height: 1;
+}
+
+.pixel-search-clear:hover {
+  color: var(--accent-primary);
+}
+
+/* Skills Grid */
+.pixel-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Pixel Skill Card */
+.pixel-card {
+  background: var(--pixel-card-bg);
+  border: 2px solid var(--pixel-border-color);
+  border-radius: 4px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+  position: relative;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.22s ease,
+              border-color 0.22s ease,
+              background-color 0.22s ease;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+
+/* Retro Chamfered Corner Accents (Subtle 8-bit aesthetic) */
+.pixel-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid var(--pixel-border-color);
+  border-left: 2px solid var(--pixel-border-color);
+}
+
+.pixel-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid var(--pixel-border-color);
+  border-right: 2px solid var(--pixel-border-color);
+}
+
+/* Hover & Active / Equipped Interactions */
+.pixel-card:hover {
+  transform: translateY(-5px);
+  background: var(--pixel-card-hover-bg);
+  border-color: var(--pixel-accent-cyan);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.45), 0 0 20px rgba(6, 182, 212, 0.25);
+}
+
+.pixel-card:focus-visible {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4);
+}
+
+.pixel-card.active-equipped {
+  border-color: var(--pixel-accent-cyan) !important;
+  background: var(--pixel-card-hover-bg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.5), 0 0 24px rgba(6, 182, 212, 0.35) !important;
+}
+
+.pixel-card.active-equipped .pixel-inspect-link {
+  color: var(--pixel-accent-cyan);
+  font-weight: 700;
+}
+
+.pixel-card.filtered-out {
+  display: none !important;
+}
+
+/* Card Header: Icon & Metadata */
+.pixel-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+/* Pixel Art Icon Frame */
+.pixel-icon-frame {
+  width: 48px;
+  height: 48px;
+  background: var(--pixel-slot-bg);
+  border: 1.5px solid var(--pixel-border-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4), 0 2px 0 rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pixel-card:hover .pixel-icon-frame {
+  transform: scale(1.08) rotate(-2deg);
+  border-color: var(--pixel-accent-cyan);
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.3);
+}
+
+.pixel-icon-svg {
+  shape-rendering: crispEdges;
+  display: block;
+}
+
+.pixel-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.pixel-cat-tag {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.tag-lang {
+  background: rgba(99, 102, 241, 0.18);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.35);
+}
+
+.tag-aiml {
+  background: rgba(168, 85, 247, 0.18);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.tag-frame {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.tag-tool {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.pixel-rank-badge {
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+
+/* Card Body */
+.pixel-card-body {
+  margin-bottom: 1.25rem;
+}
+
+.skill-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.skill-role-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* ========================================================
+   PROGRESS BAR: 10-SEGMENTED RETRO STAMINA METER
+   Represents practical software engineer proficiency
+   ======================================================== */
+.pixel-meter-wrapper {
+  margin-bottom: 1rem;
+}
+
+.pixel-meter-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.pixel-meter-label {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.pixel-meter-pct {
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Groove track */
+.pixel-meter-track {
+  position: relative;
+  height: 14px;
+  background: var(--pixel-slot-bg);
+  border: 1.5px solid var(--pixel-border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Animated Fill Bar */
+.pixel-meter-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.fill-cyan {
+  background: linear-gradient(90deg, #0284c7 0%, #06b6d4 100%);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+.fill-indigo {
+  background: linear-gradient(90deg, #4338ca 0%, #6366f1 100%);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+.fill-purple {
+  background: linear-gradient(90deg, #7e22ce 0%, #a855f7 100%);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.fill-amber {
+  background: linear-gradient(90deg, #d97706 0%, #f59e0b 100%);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.fill-rose {
+  background: linear-gradient(90deg, #e11d48 0%, #f43f5e 100%);
+  box-shadow: 0 0 10px rgba(244, 63, 94, 0.5);
+}
+
+.fill-teal {
+  background: linear-gradient(90deg, #0f766e 0%, #14b8a6 100%);
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
+}
+
+/* 10 Segment Divider Overlay */
+.pixel-meter-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  pointer-events: none;
+}
+
+.pixel-meter-grid span {
+  border-right: 1.5px solid rgba(0, 0, 0, 0.55);
+}
+
+.pixel-meter-grid span:last-child {
+  border-right: none;
+}
+
+/* Light mode divider contrast */
+[data-theme="light"] .pixel-meter-grid span {
+  border-right: 1.5px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Competency Tags */
+.pixel-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pixel-tag-item {
+  font-size: 0.72rem;
+  background: var(--pixel-slot-bg);
+  border: 1px solid var(--pixel-border-color);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.pixel-card:hover .pixel-tag-item {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+}
+
+/* Card Footer */
+.pixel-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--pixel-border-color);
+}
+
+.pixel-inspect-link {
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+
+.pixel-card:hover .pixel-inspect-link {
+  color: var(--pixel-accent-cyan);
+}
+
+.pixel-tier-label {
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.tier-master { color: #f59e0b; }
+.tier-expert { color: #38bdf8; }
+.tier-adv    { color: #a855f7; }
+
+/* ========================================================
+   DYNAMIC RETRO SKILL INSPECTOR HUD & TERMINAL
+   Interactive arcade console displaying telemetry & code
+   ======================================================== */
+.pixel-inspector-hud {
+  background: var(--pixel-hud-bg);
+  border: 2px solid var(--pixel-border-color);
+  border-radius: 6px;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Retro Scanline Overlay Texture */
+.pixel-inspector-hud::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.04) 0px,
+    rgba(0, 0, 0, 0.04) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+.inspector-header {
+  background: var(--pixel-slot-bg);
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1.5px solid var(--pixel-border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inspector-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inspector-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.inspector-dot.red { background: #ef4444; }
+.inspector-dot.yellow { background: #f59e0b; }
+.inspector-dot.green { background: #10b981; }
+
+.inspector-title {
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  color: var(--text-primary);
+  letter-spacing: 0.06em;
+  margin-left: 0.4rem;
+}
+
+.pixel-blink-text {
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  color: var(--pixel-accent-emerald);
+  animation: pixelBlink 1.4s steps(2, start) infinite;
+}
+
+/* Inspector Layout: 2 Columns */
+.inspector-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 900px) {
+  .inspector-body {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Left Inspector Column */
+.inspector-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.inspector-icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: var(--pixel-slot-bg);
+  border: 2px solid var(--pixel-accent-cyan);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(6, 182, 212, 0.35);
+  flex-shrink: 0;
+}
+
+.inspector-kicker {
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  color: var(--pixel-accent-cyan);
+  letter-spacing: 0.06em;
+  display: block;
+}
+
+.inspector-skill-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin: 0.15rem 0 0.4rem 0;
+}
+
+.inspector-meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pixel-pill {
+  font-family: var(--font-pixel);
+  font-size: 0.62rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--pixel-slot-bg);
+  border: 1px solid var(--pixel-border-color);
+  border-radius: 2px;
+  color: var(--text-secondary);
+}
+
+.inspector-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.inspector-subhead {
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.inspector-checklist {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inspector-checklist li {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+.inspector-checklist li::before {
+  content: "►";
+  color: var(--pixel-accent-cyan);
+  font-size: 0.7rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+/* Right Inspector Column: Telemetry & Terminal */
+.inspector-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.inspector-stat-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-pixel);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.pixel-mini-meter {
+  height: 8px;
+  background: var(--pixel-slot-bg);
+  border: 1px solid var(--pixel-border-color);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.pixel-mini-fill {
+  height: 100%;
+  background: var(--pixel-accent-cyan);
+  transition: width 0.4s ease;
+}
+
+/* Code Snippet Box */
+.inspector-code-box {
+  background: var(--pixel-slot-bg);
+  border: 1.5px solid var(--pixel-border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.inspector-code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid var(--pixel-border-color);
+}
+
+.code-tab-name {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.pixel-run-btn {
+  background: transparent;
+  border: 1px solid var(--pixel-accent-emerald);
+  color: var(--pixel-accent-emerald);
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pixel-run-btn:hover {
+  background: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+.inspector-code-pre {
+  margin: 0;
+  padding: 0.85rem;
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  overflow-x: auto;
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.inspector-terminal-log {
+  padding: 0.5rem 0.85rem;
+  background: rgba(16, 185, 129, 0.1);
+  border-top: 1px solid rgba(16, 185, 129, 0.3);
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  color: var(--pixel-accent-emerald);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.log-cursor {
+  animation: pixelBlink 1s infinite;
+}
+
+/* Responsive adjustments for Skills Section */
+@media (max-width: 768px) {
+  .pixel-filter-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pixel-search-box {
+    width: 100%;
+    min-width: 0;
+  }
+  .pixel-hud-banner {
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  .pixel-hud-controls {
+    justify-content: flex-start;
+    grid-column: 1 / -1;
+  }
+  .inspector-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================================
+   TIMELINE SECTION
+   ======================================================== */
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  border-left: 2px solid var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.45rem;
+  top: 0.25rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.timeline-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 1.75rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.timeline-content:hover {
+  border-color: var(--border-focus);
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-role {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.mini-tag {
+  background: var(--bg-secondary);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* ========================================================
+   PROJECTS SECTION
+   ======================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+  border-color: var(--accent-primary);
+}
+
+.project-preview {
+  height: 180px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.preview-icon {
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.project-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--accent-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.project-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accent-primary);
+  transition: var(--transition);
+}
+
+.project-btn.secondary {
+  color: var(--text-secondary);
+}
+
+.project-btn:hover {
+  color: var(--accent-secondary);
+}
+
+/* ========================================================
+   CONTACT SECTION
+   ======================================================== */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-details p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  background: var(--bg-secondary);
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.contact-item a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* ========================================================
+   FOOTER
+   ======================================================== */
+.site-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 2.5rem 0;
+  background: var(--bg-secondary);
+  margin-top: 4rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.copyright {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.footer-subtext {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--accent-primary);
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN
+   ======================================================== */
+@media (max-width: 900px) {
+  .pixel-hero-grid,
+  .about-grid,
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-image-card {
+    position: static;
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .pixel-hero-title {
+    font-size: 1.4rem;
+  }
+
+  .pixel-hud-bar {
+    font-size: 0.62rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .pixel-hero {
+    padding: 2.5rem 0 3.5rem 0;
+  }
+
+  .pixel-box {
+    padding: 1.25rem;
+  }
+
+  .pixel-hero-title {
+    font-size: 1.2rem;
+  }
+
+  .pixel-stat-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .stat-value {
+    text-align: left;
+  }
+
+  .pixel-cta-group {
+    flex-direction: column;
+  }
+
+  .pixel-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    display: none; /* can be opened via mobile toggle */
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem;
+  }
+
+  .nav-menu.open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .section-padding {
+    padding: 4rem 0;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .profile-card-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-item {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .highlight-icon-box {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+  <!-- ========================================================
+       HEADER & NAVIGATION SECTION
+       Contains branding, navigation links, and night mode toggle
+       ======================================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span><span class="logo-text">Tanuja</span><span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- ========================================================
+             NIGHT MODE / DARK THEME TOGGLE
+             Uses CSS media query detection by default with manual override
+             ======================================================== -->
+        <!-- NIGHT MODE TOGGLE START -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Night Mode" title="Toggle Night/Light Mode">
+          <span class="toggle-icon sun-icon" aria-hidden="true">☀️</span>
+          <span class="toggle-icon moon-icon" aria-hidden="true">🌙</span>
+        </button>
+        <!-- NIGHT MODE TOGGLE END -->
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       MAIN CONTENT CONTAINER
+       ======================================================== -->
+  <main id="main-content">
+
+    <!-- ========================================================
+         1. HERO SECTION (MINIMAL PROFESSIONAL THEME)
+         - Welcome title & brief tagline
+         - Background image: portfolio.avif
+         - Minimal status badge & engineering metrics
+         - Interactive code preview card
+         - Night mode toggle with CSS media query detection
+         ======================================================== -->
+    <!-- HERO SECTION START -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
+      <div class="hero-background-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Left Column: Welcome Title, Tagline, Metrics & Professional CTAs -->
+        <div class="hero-content">
+          <!-- Status pill badge & in-hero theme indicator -->
+          <div class="hero-top-meta">
+            <div class="hero-badge">
+              <span class="badge-dot"></span> Available for new opportunities
+            </div>
+            
+            <button id="hero-theme-toggle" class="hero-theme-pill" aria-label="Toggle Night / Light Mode" title="Click to toggle theme">
+              <span class="theme-pill-label">Theme:</span>
+              <span class="theme-status-text" id="theme-status-text">Auto</span>
+              <span class="toggle-icon sun-icon" aria-hidden="true"> ☀️</span>
+              <span class="toggle-icon moon-icon" aria-hidden="true"> 🌙</span>
+            </button>
+          </div>
+
+          <!-- Welcome Title -->
+          <h1 id="hero-title" class="hero-title">
+            Welcome, Visitor.<br>
+            I'm <span class="gradient-text">Tanuja M C</span>.
+          </h1>
+
+          <!-- Brief Tagline -->
+          <p class="hero-tagline">
+            Software Engineer specializing in Java, Python, C, IoT sensor-based alert architectures, and modern web applications.
+          </p>
+
+          <!-- Minimal Engineering Metrics -->
+          <div class="hero-metrics-grid">
+            <div class="metric-card">
+              <span class="metric-number">3+</span>
+              <span class="metric-label">Languages (Java/Py/C)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">IoT</span>
+              <span class="metric-label">Sensor Systems</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Clean Code Focus</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons (Minimal Professional Style) -->
+          <div class="hero-cta-group">
+            <a href="#about" class="btn btn-primary" id="btn-hero-about">
+              About Me &rarr;
+            </a>
+            <a href="#projects" class="btn btn-secondary" id="btn-hero-projects">
+              View Projects
+            </a>
+            <a href="resume2.pdf" class="btn btn-ghost" id="btn-hero-resume" download="Tanuja_MC_Resume.pdf">
+              Resume 📄
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Minimal Professional Code Architecture Card -->
+        <div class="hero-visual">
+          <div class="code-preview-card">
+            <div class="code-card-header">
+              <div class="window-controls">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="code-file-name">tanuja_profile.ts</span>
+              <span class="code-badge">TypeScript</span>
+            </div>
+            <pre class="code-body"><code><span class="token-keyword">interface</span> <span class="token-type">EngineerProfile</span> {
+  <span class="token-prop">name</span>: <span class="token-string">"Tanuja M C"</span>;
+  <span class="token-prop">role</span>: <span class="token-string">"Software Engineer"</span>;
+  <span class="token-prop">languages</span>: [<span class="token-string">"Java"</span>, <span class="token-string">"Python"</span>, <span class="token-string">"C"</span>];
+  <span class="token-prop">focus</span>: [<span class="token-string">"Clean Code"</span>, <span class="token-string">"IoT Sensors"</span>, <span class="token-string">"Web"</span>];
+  <span class="token-prop">standards</span>: {
+    <span class="token-prop">cleanArchitecture</span>: <span class="token-boolean">true</span>;
+    <span class="token-prop">analyticalProblemSolving</span>: <span class="token-boolean">true</span>;
+  };
+}
+
+<span class="token-keyword">const</span> <span class="token-variable">tanuja</span>: <span class="token-type">EngineerProfile</span> = {
+  <span class="token-prop">name</span>: <span class="token-string">"Tanuja M C"</span>,
+  <span class="token-prop">role</span>: <span class="token-string">"Software Engineer"</span>,
+  <span class="token-prop">languages</span>: [<span class="token-string">"Java"</span>, <span class="token-string">"Python"</span>, <span class="token-string">"C"</span>],
+  <span class="token-function">buildSolution</span>: () =&gt; <span class="token-string">"Designed with precision."</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- HERO SECTION END -->
+
+
+    <!-- ========================================================
+         2. ABOUT SECTION (CLEAN & MINIMALISTIC)
+         Personal profile, software engineer bio, career highlights & interests
+         ======================================================== -->
+    <!-- ABOUT SECTION START -->
+    <section class="about-section section-padding" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get To Know Me</span>
+          <h2 id="about-title" class="section-title">About <span class="gradient-text">Tanuja M C</span></h2>
+          <p class="section-lead">Dedicated software engineer passionate about clean architecture, sensor-based innovations, and purposeful problem-solving.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Profile Card with Photo, Status Badge & Quick Info -->
+          <div class="about-image-card">
+            <div class="profile-frame">
+              <div class="profile-image-container">
+                <img src="tanuja-profile.jpg" alt="Tanuja M C - Software Engineer" class="profile-image" id="about-profile-img" loading="lazy">
+                <div class="profile-status-pill">
+                  <span class="status-pulse-dot" aria-hidden="true"></span>
+                  <span>Available for Opportunities</span>
+                </div>
+              </div>
+
+              <div class="profile-card-details">
+                <h3 class="profile-card-name">Tanuja M C</h3>
+                <p class="profile-card-role">Software Engineer</p>
+
+                <div class="profile-quick-info">
+                  <div class="info-row">
+                    <span class="info-icon" aria-hidden="true">📍</span>
+                    <span class="info-label">Location:</span>
+                    <span class="info-value">Karnataka, India</span>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-icon" aria-hidden="true">🎓</span>
+                    <span class="info-label">Education:</span>
+                    <span class="info-value">Raghavendra Hi-Tech PU College</span>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-icon" aria-hidden="true">⚡</span>
+                    <span class="info-label">Core Stack:</span>
+                    <span class="info-value">Java &bull; Python &bull; C</span>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-icon" aria-hidden="true">🎯</span>
+                    <span class="info-label">Focus:</span>
+                    <span class="info-value">Software Dev &amp; IoT Alerts</span>
+                  </div>
+                </div>
+
+                <div class="profile-card-actions">
+                  <a href="resume2.pdf" class="btn btn-primary btn-sm" download="Tanuja_MC_Resume.pdf" id="btn-about-resume" title="Download Tanuja's Resume">
+                    <span class="btn-icon" aria-hidden="true">📄</span> Download Resume
+                  </a>
+                  <a href="#contact" class="btn btn-secondary btn-sm" id="btn-about-contact" title="Get in touch with Tanuja">
+                    Contact Me &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Professional Bio, Highlights & Personal Interests -->
+          <div class="about-bio-content">
+            <!-- Professional Narrative Bio -->
+            <div class="bio-text-block">
+              <h3 class="bio-heading">Transforming logical concepts into reliable, clean-coded software solutions.</h3>
+              <p class="lead-text">
+                I am a passionate and motivated <strong>Software Engineer</strong> with a strong foundation in computer science, algorithmic reasoning, and software development. With hands-on proficiency in <strong>Java, Python, and C</strong>, I love tackling intricate engineering problems and creating systems that are both technically robust and user-friendly.
+              </p>
+              <p class="bio-description">
+                My engineering approach is built around discipline, clean code architecture, and a relentless desire to learn. Whether I am writing modular object-oriented programs, analyzing data flows, or engineering sensor-integrated alert mechanisms, I take pride in crafting maintainable, high-quality code that solves real-world challenges.
+              </p>
+            </div>
+
+            <!-- Career Highlights -->
+            <div class="highlights-container">
+              <h4 class="subheading-minimal">Career &amp; Technical Highlights</h4>
+              <div class="highlights-grid">
+                <!-- Highlight 1: Key Project -->
+                <div class="highlight-item">
+                  <div class="highlight-icon-box" aria-hidden="true">🌧️</div>
+                  <div class="highlight-text">
+                    <h5>Rain Detection and Alert System</h5>
+                    <p>Conceptualized and engineered an automated sensor-based alert system capable of detecting precipitation in real time and triggering prompt notifications. Applied core programming logic to interface hardware sensors with automated software alerts.</p>
+                  </div>
+                </div>
+
+                <!-- Highlight 2: Core Engineering Foundations -->
+                <div class="highlight-item">
+                  <div class="highlight-icon-box" aria-hidden="true">💻</div>
+                  <div class="highlight-text">
+                    <h5>Object-Oriented Programming &amp; Logic</h5>
+                    <p>Deep familiarity with Object-Oriented Programming (OOP) paradigms, structured algorithm design, data structures, and cross-language implementation across Java, Python, and C.</p>
+                  </div>
+                </div>
+
+                <!-- Highlight 3: Academic Foundations -->
+                <div class="highlight-item">
+                  <div class="highlight-icon-box" aria-hidden="true">🎓</div>
+                  <div class="highlight-text">
+                    <h5>Academic Foundations &amp; Discipline</h5>
+                    <p>Demonstrated consistent academic excellence and technical rigor at Raghavendra Hi-Tech PU College (Davanagere) and KRCR School (Chikkamadal), with an emphasis on mathematics and computer science.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personal Interests -->
+            <div class="interests-container">
+              <h4 class="subheading-minimal">Personal Interests &amp; Passions</h4>
+              <div class="interest-tags">
+                <span class="interest-pill"><span class="pill-emoji">🤖</span> IoT &amp; Smart Sensor Systems</span>
+                <span class="interest-pill"><span class="pill-emoji">🧩</span> Logic Puzzles &amp; Algorithms</span>
+                <span class="interest-pill"><span class="pill-emoji">🌐</span> Modern Web Development</span>
+                <span class="interest-pill"><span class="pill-emoji">📖</span> Emerging Tech Literature</span>
+                <span class="interest-pill"><span class="pill-emoji">🌱</span> Open-Source Exploration</span>
+                <span class="interest-pill"><span class="pill-emoji">✨</span> Minimalist UI/UX Aesthetics</span>
+              </div>
+            </div>
+
+            <!-- Minimal Key Metrics -->
+            <div class="about-stats-grid">
+              <div class="stat-card">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Core Languages</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">IoT</span>
+                <span class="stat-label">Real-Time Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Dedication to Quality</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT SECTION END -->
+
+
+    <!-- ========================================================
+         3. SKILLS SECTION (PIXEL ART RPG & HUD AESTHETIC)
+         Highlights the software engineer's core competencies across:
+         - Languages: Python, C++, SQL
+         - AI & Deep Learning: Machine Learning, Deep Learning, NLP, Computer Vision, Generative AI
+         - Frameworks & APIs: PyTorch, TensorFlow, Scikit-learn, FastAPI
+         - Data & Tools: Pandas, NumPy, Git, GitHub
+         Equipped with segmented pixel progress bars, custom pixel-art icons,
+         interactive filtering, search, audio toggles, and live terminal inspector.
+         ======================================================== -->
+    <!-- SKILLS SECTION START -->
+    <section class="skills-section section-padding" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <!-- Pixel HUD Section Header -->
+        <div class="section-header">
+          <div class="pixel-badge-header" aria-hidden="true">
+            <span class="pixel-blink-dot"></span>
+            <span class="pixel-badge-text">SYSTEM STATUS: SKILL_MATRIX_V2.5 ONLINE</span>
+            <span class="pixel-blink-dot"></span>
+          </div>
+          <h2 id="skills-title" class="section-title">Core <span class="gradient-text">Competencies</span> &amp; Skills</h2>
+          <p class="section-lead">A comprehensive inventory of engineering proficiencies, machine learning frameworks, data pipelines, and developer tooling rendered with a retro pixel-art HUD aesthetic.</p>
+        </div>
+
+        <!-- Pixel RPG Summary HUD Banner -->
+        <div class="pixel-hud-banner" role="region" aria-label="Player Skill Stats">
+          <div class="pixel-hud-item">
+            <span class="pixel-hud-label">PLAYER CLASS</span>
+            <span class="pixel-hud-val">AI &bull; SWE [LVL 99]</span>
+          </div>
+          <div class="pixel-hud-item">
+            <span class="pixel-hud-label">CORE ARSENAL</span>
+            <span class="pixel-hud-val"><span id="hud-active-count">16</span> / 16 COMPETENCIES</span>
+          </div>
+          <div class="pixel-hud-item">
+            <span class="pixel-hud-label">AVG MASTERY</span>
+            <span class="pixel-hud-val text-cyan">91.4% EXP</span>
+          </div>
+          <div class="pixel-hud-item pixel-hud-controls">
+            <!-- 8-Bit Web Audio Sound Effect Toggle Button -->
+            <button id="pixel-sfx-toggle" class="pixel-btn-chip" aria-label="Toggle retro 8-bit sound effects" title="Toggle 8-bit SFX audio feedback">
+              <span class="sfx-icon">🔇</span>
+              <span class="sfx-text">SFX: OFF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Controls & Real-Time Search Bar -->
+        <div class="pixel-filter-wrapper">
+          <div class="pixel-tabs" role="tablist" aria-label="Skill Categories">
+            <button class="pixel-tab active" data-filter="all" role="tab" aria-selected="true" id="tab-all">
+              <span class="pixel-tab-icon">★</span> ALL SKILLS <span class="pixel-tab-count">(16)</span>
+            </button>
+            <button class="pixel-tab" data-filter="lang" role="tab" aria-selected="false" id="tab-lang">
+              <span class="pixel-tab-icon">⚙</span> LANGUAGES <span class="pixel-tab-count">(3)</span>
+            </button>
+            <button class="pixel-tab" data-filter="aiml" role="tab" aria-selected="false" id="tab-aiml">
+              <span class="pixel-tab-icon">🧠</span> AI &amp; MACHINE LEARNING <span class="pixel-tab-count">(5)</span>
+            </button>
+            <button class="pixel-tab" data-filter="frameworks" role="tab" aria-selected="false" id="tab-frameworks">
+              <span class="pixel-tab-icon">⚡</span> FRAMEWORKS &amp; APIS <span class="pixel-tab-count">(4)</span>
+            </button>
+            <button class="pixel-tab" data-filter="tools" role="tab" aria-selected="false" id="tab-tools">
+              <span class="pixel-tab-icon">🛠️</span> DATA &amp; TOOLS <span class="pixel-tab-count">(4)</span>
+            </button>
+          </div>
+
+          <!-- Quick Search Filter Box -->
+          <div class="pixel-search-box">
+            <span class="pixel-search-prefix" aria-hidden="true">&gt;&gt;</span>
+            <input type="text" id="pixel-skill-search" class="pixel-search-input" placeholder="Search skill (e.g. PyTorch, SQL, FastAPI)..." aria-label="Search skills">
+            <button id="pixel-search-clear" class="pixel-search-clear" aria-label="Clear search" title="Clear search" style="display: none;">&times;</button>
+          </div>
+        </div>
+
+        <!-- Main Skills Grid: 16 Core Competencies -->
+        <div class="skills-grid pixel-skills-grid" id="pixel-skills-grid" role="list">
+
+          <!-- ========================================================
+               SKILL 1: PYTHON
+               Represents core programming versatility, object-oriented architecture,
+               automation, and backbone for artificial intelligence / data processing.
+               - Pixel Icon: Intertwined dual-color Python serpent insignia
+               - Progress Bar: 95% proficiency with 10 segmented stamina steps
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="lang" data-skill-id="python" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Python Dual Serpent -->
+              <div class="pixel-icon-frame icon-python" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="7" y="3" width="7" height="3" fill="#38BDF8"/>
+                  <rect x="5" y="6" width="9" height="3" fill="#38BDF8"/>
+                  <rect x="5" y="9" width="5" height="4" fill="#38BDF8"/>
+                  <rect x="7" y="11" width="7" height="2" fill="#38BDF8"/>
+                  <rect x="7" y="5" width="2" height="2" fill="#0F172A"/>
+                  <rect x="10" y="18" width="7" height="3" fill="#FBBF24"/>
+                  <rect x="10" y="15" width="9" height="3" fill="#FBBF24"/>
+                  <rect x="14" y="11" width="5" height="4" fill="#FBBF24"/>
+                  <rect x="10" y="11" width="7" height="2" fill="#FBBF24"/>
+                  <rect x="15" y="17" width="2" height="2" fill="#0F172A"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-lang">LANG</span>
+                <span class="pixel-rank-badge rank-master">LVL 95</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Python</h3>
+              <p class="skill-role-desc">Core Language &bull; Scripting &amp; AI Pipelines</p>
+              
+              <!-- Progress Bar: 95% Master Tier (10-Segmented Retro Meter) -->
+              <div class="pixel-meter-wrapper" aria-label="Python Proficiency: 95%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">95%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="95">
+                  <div class="pixel-meter-fill fill-cyan" style="width: 95%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List: Practical software engineering capabilities -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">OOP Design</span>
+                <span class="pixel-tag-item">AI Automation</span>
+                <span class="pixel-tag-item">Async IO</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 2: C++
+               Represents low-level systems programming, memory control, algorithmic
+               speed, pointer management, and hardware/sensor level efficiency.
+               - Pixel Icon: Indigo pixel shield with C++ geometric monogram
+               - Progress Bar: 88% proficiency demonstrating algorithmic depth
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="lang" data-skill-id="cpp" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: C++ Shield -->
+              <div class="pixel-icon-frame icon-cpp" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="3" width="16" height="12" fill="#6366F1"/>
+                  <rect x="6" y="15" width="12" height="4" fill="#6366F1"/>
+                  <rect x="9" y="19" width="6" height="3" fill="#6366F1"/>
+                  <rect x="7" y="7" width="4" height="2" fill="#FFFFFF"/>
+                  <rect x="7" y="9" width="2" height="4" fill="#FFFFFF"/>
+                  <rect x="7" y="13" width="4" height="2" fill="#FFFFFF"/>
+                  <rect x="13" y="9" width="1" height="5" fill="#38BDF8"/>
+                  <rect x="11" y="11" width="5" height="1" fill="#38BDF8"/>
+                  <rect x="18" y="9" width="1" height="5" fill="#38BDF8"/>
+                  <rect x="16" y="11" width="5" height="1" fill="#38BDF8"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-lang">LANG</span>
+                <span class="pixel-rank-badge rank-expert">LVL 88</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">C++</h3>
+              <p class="skill-role-desc">Systems &bull; High-Performance Computing</p>
+              
+              <!-- Progress Bar: 88% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="C++ Proficiency: 88%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">88%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="88">
+                  <div class="pixel-meter-fill fill-indigo" style="width: 88%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Memory Mgmt</span>
+                <span class="pixel-tag-item">STL Algorithms</span>
+                <span class="pixel-tag-item">Low Latency</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 3: SQL
+               Represents relational database modeling, structured querying,
+               schema indexing, transactional ACID guarantees, and aggregation.
+               - Pixel Icon: Multi-tiered cylindrical database storage disks
+               - Progress Bar: 90% proficiency for complex relational query handling
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="lang" data-skill-id="sql" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: SQL Database Cylinder -->
+              <div class="pixel-icon-frame icon-sql" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="4" width="16" height="4" fill="#06B6D4"/>
+                  <rect x="6" y="3" width="12" height="1" fill="#22D3EE"/>
+                  <rect x="4" y="10" width="16" height="4" fill="#0891B2"/>
+                  <rect x="6" y="9" width="12" height="1" fill="#22D3EE"/>
+                  <rect x="4" y="16" width="16" height="4" fill="#0E7490"/>
+                  <rect x="6" y="15" width="12" height="1" fill="#22D3EE"/>
+                  <rect x="17" y="5" width="2" height="2" fill="#F8FAFC"/>
+                  <rect x="17" y="11" width="2" height="2" fill="#F8FAFC"/>
+                  <rect x="17" y="17" width="2" height="2" fill="#F8FAFC"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-lang">LANG</span>
+                <span class="pixel-rank-badge rank-expert">LVL 90</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">SQL</h3>
+              <p class="skill-role-desc">Relational DB &bull; Complex Joins &amp; Indexing</p>
+              
+              <!-- Progress Bar: 90% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="SQL Proficiency: 90%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">90%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="90">
+                  <div class="pixel-meter-fill fill-teal" style="width: 90%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Schema Design</span>
+                <span class="pixel-tag-item">Aggregations</span>
+                <span class="pixel-tag-item">Query Tuning</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 4: MACHINE LEARNING
+               Represents foundational algorithmic AI: supervised & unsupervised learning,
+               decision trees, regression models, feature selection, and model evaluation.
+               - Pixel Icon: Purple pixelated neural brain graph with glowing nodes
+               - Progress Bar: 92% proficiency in statistical predictive modeling
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="ml" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Machine Learning Brain Graph -->
+              <div class="pixel-icon-frame icon-ml" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="3" width="4" height="4" fill="#A855F7"/>
+                  <rect x="4" y="9" width="4" height="4" fill="#C084FC"/>
+                  <rect x="16" y="9" width="4" height="4" fill="#C084FC"/>
+                  <rect x="6" y="17" width="4" height="4" fill="#8B5CF6"/>
+                  <rect x="14" y="17" width="4" height="4" fill="#8B5CF6"/>
+                  <rect x="8" y="7" width="2" height="2" fill="#DDD6FE"/>
+                  <rect x="14" y="7" width="2" height="2" fill="#DDD6FE"/>
+                  <rect x="10" y="11" width="4" height="2" fill="#DDD6FE"/>
+                  <rect x="8" y="13" width="2" height="4" fill="#DDD6FE"/>
+                  <rect x="14" y="13" width="2" height="4" fill="#DDD6FE"/>
+                  <rect x="11" y="9" width="2" height="4" fill="#EC4899"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-master">LVL 92</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Machine Learning</h3>
+              <p class="skill-role-desc">Predictive Models &bull; Supervised Learning</p>
+              
+              <!-- Progress Bar: 92% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Machine Learning Proficiency: 92%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">92%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="92">
+                  <div class="pixel-meter-fill fill-purple" style="width: 92%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Classification</span>
+                <span class="pixel-tag-item">Feature Eng.</span>
+                <span class="pixel-tag-item">Validation</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 5: DEEP LEARNING
+               Represents deep neural networks, multilayer perceptrons, backpropagation,
+               gradient descent optimization, activation functions, and loss convergence.
+               - Pixel Icon: Multi-tier neural network with interconnected layers
+               - Progress Bar: 90% proficiency in deep architecture training
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="dl" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Deep Learning Multilayer Network -->
+              <div class="pixel-icon-frame icon-dl" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="4" width="3" height="3" fill="#F43F5E"/>
+                  <rect x="3" y="10" width="3" height="3" fill="#F43F5E"/>
+                  <rect x="3" y="16" width="3" height="3" fill="#F43F5E"/>
+                  <rect x="10" y="3" width="3" height="3" fill="#FB7185"/>
+                  <rect x="10" y="8" width="3" height="3" fill="#FB7185"/>
+                  <rect x="10" y="13" width="3" height="3" fill="#FB7185"/>
+                  <rect x="10" y="18" width="3" height="3" fill="#FB7185"/>
+                  <rect x="18" y="7" width="3" height="3" fill="#FDA4AF"/>
+                  <rect x="18" y="14" width="3" height="3" fill="#FDA4AF"/>
+                  <rect x="6" y="5" width="4" height="2" fill="#FFE4E6"/>
+                  <rect x="6" y="11" width="4" height="2" fill="#FFE4E6"/>
+                  <rect x="6" y="17" width="4" height="2" fill="#FFE4E6"/>
+                  <rect x="13" y="9" width="5" height="2" fill="#FFE4E6"/>
+                  <rect x="13" y="15" width="5" height="2" fill="#FFE4E6"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-expert">LVL 90</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Deep Learning</h3>
+              <p class="skill-role-desc">Neural Networks &bull; Backprop &amp; Convergence</p>
+              
+              <!-- Progress Bar: 90% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Deep Learning Proficiency: 90%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">90%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="90">
+                  <div class="pixel-meter-fill fill-rose" style="width: 90%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">DNNs &amp; MLPs</span>
+                <span class="pixel-tag-item">Gradient Descent</span>
+                <span class="pixel-tag-item">Loss Optimization</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 6: NLP (NATURAL LANGUAGE PROCESSING)
+               Represents text preprocessing, tokenization, contextual embeddings,
+               sentiment classification, sequence modeling, and transformer mechanics.
+               - Pixel Icon: Sky blue pixel speech bubble with text tokens & matrix wave
+               - Progress Bar: 88% proficiency in linguistic processing pipelines
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="nlp" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: NLP Speech Matrix -->
+              <div class="pixel-icon-frame icon-nlp" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="12" fill="#0EA5E9"/>
+                  <rect x="5" y="15" width="8" height="3" fill="#0EA5E9"/>
+                  <rect x="5" y="18" width="3" height="3" fill="#0EA5E9"/>
+                  <rect x="6" y="6" width="3" height="2" fill="#FFFFFF"/>
+                  <rect x="11" y="6" width="4" height="2" fill="#FFFFFF"/>
+                  <rect x="17" y="6" width="2" height="2" fill="#FFFFFF"/>
+                  <rect x="6" y="10" width="5" height="2" fill="#BAE6FD"/>
+                  <rect x="13" y="10" width="6" height="2" fill="#BAE6FD"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-expert">LVL 88</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">NLP</h3>
+              <p class="skill-role-desc">Natural Language &bull; Embeddings &amp; Text AI</p>
+              
+              <!-- Progress Bar: 88% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="NLP Proficiency: 88%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">88%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="88">
+                  <div class="pixel-meter-fill fill-cyan" style="width: 88%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Tokenization</span>
+                <span class="pixel-tag-item">Vector Embeds</span>
+                <span class="pixel-tag-item">Transformers</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 7: COMPUTER VISION
+               Represents spatial visual processing, convolutional neural networks (CNNs),
+               image filtering, contour recognition, and sensor/camera visual analysis.
+               - Pixel Icon: Amber cybernetic camera lens with target crosshairs
+               - Progress Bar: 86% proficiency in image feature extraction
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="cv" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Computer Vision Cybernetic Reticle -->
+              <div class="pixel-icon-frame icon-cv" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="5" width="16" height="14" fill="#F59E0B"/>
+                  <rect x="6" y="3" width="6" height="2" fill="#D97706"/>
+                  <rect x="7" y="8" width="10" height="8" fill="#1E293B"/>
+                  <rect x="10" y="10" width="4" height="4" fill="#FBBF24"/>
+                  <rect x="11" y="11" width="2" height="2" fill="#FFFFFF"/>
+                  <rect x="11" y="7" width="2" height="2" fill="#EF4444"/>
+                  <rect x="11" y="15" width="2" height="2" fill="#EF4444"/>
+                  <rect x="5" y="11" width="2" height="2" fill="#EF4444"/>
+                  <rect x="17" y="11" width="2" height="2" fill="#EF4444"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-adv">LVL 86</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Computer Vision</h3>
+              <p class="skill-role-desc">Image Recognition &bull; CNNs &amp; Spatial Tensors</p>
+              
+              <!-- Progress Bar: 86% Advanced Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Computer Vision Proficiency: 86%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">86%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="86">
+                  <div class="pixel-meter-fill fill-amber" style="width: 86%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">CNN Models</span>
+                <span class="pixel-tag-item">Filtering</span>
+                <span class="pixel-tag-item">Image Tensors</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-adv">ADVANCED</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 8: GENERATIVE AI
+               Represents modern frontier AI architectures: large language models (LLMs),
+               RAG (retrieval-augmented generation), prompt engineering, and diffusion.
+               - Pixel Icon: Violet pixelated four-point star with generative sparkles
+               - Progress Bar: 91% proficiency in generative pipelines & agentic flows
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="aiml" data-skill-id="genai" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Generative AI Sparkle Star -->
+              <div class="pixel-icon-frame icon-genai" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="2" width="4" height="3" fill="#C084FC"/>
+                  <rect x="10" y="11" width="4" height="3" fill="#C084FC"/>
+                  <rect x="2" y="6" width="3" height="4" fill="#C084FC"/>
+                  <rect x="19" y="6" width="3" height="4" fill="#C084FC"/>
+                  <rect x="7" y="5" width="10" height="6" fill="#A855F7"/>
+                  <rect x="10" y="6" width="4" height="4" fill="#FFFFFF"/>
+                  <rect x="4" y="17" width="2" height="2" fill="#E879F9"/>
+                  <rect x="18" y="16" width="3" height="3" fill="#E879F9"/>
+                  <rect x="13" y="19" width="2" height="2" fill="#F472B6"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-aiml">AI / ML</span>
+                <span class="pixel-rank-badge rank-master">LVL 91</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Generative AI</h3>
+              <p class="skill-role-desc">LLMs &bull; RAG Architectures &amp; Prompt Systems</p>
+              
+              <!-- Progress Bar: 91% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Generative AI Proficiency: 91%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">91%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="91">
+                  <div class="pixel-meter-fill fill-purple" style="width: 91%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">LLM Pipelines</span>
+                <span class="pixel-tag-item">RAG Systems</span>
+                <span class="pixel-tag-item">Prompt Eng.</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 9: PYTORCH
+               Represents dynamic computation graphs, CUDA GPU tensor acceleration,
+               deep learning research implementation, and custom neural layer training.
+               - Pixel Icon: Vibrant orange pixel torch flame with ember particles
+               - Progress Bar: 93% proficiency in neural model training and evaluation
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="frameworks" data-skill-id="pytorch" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: PyTorch Torch Flame -->
+              <div class="pixel-icon-frame icon-pytorch" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="11" y="3" width="3" height="3" fill="#FB923C"/>
+                  <rect x="9" y="6" width="7" height="4" fill="#EA580C"/>
+                  <rect x="8" y="10" width="8" height="5" fill="#EE2C1B"/>
+                  <rect x="10" y="8" width="3" height="4" fill="#FBBF24"/>
+                  <rect x="10" y="15" width="4" height="5" fill="#7C2D12"/>
+                  <rect x="17" y="4" width="2" height="2" fill="#EA580C"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-frame">FRAMEWORK</span>
+                <span class="pixel-rank-badge rank-master">LVL 93</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">PyTorch</h3>
+              <p class="skill-role-desc">Deep Learning &bull; Dynamic Tensors &amp; CUDA</p>
+              
+              <!-- Progress Bar: 93% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="PyTorch Proficiency: 93%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">93%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="93">
+                  <div class="pixel-meter-fill fill-amber" style="width: 93%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Autograd</span>
+                <span class="pixel-tag-item">CUDA GPU</span>
+                <span class="pixel-tag-item">Model Training</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 10: TENSORFLOW
+               Represents production deep learning deployments, graph execution,
+               Keras abstraction layers, model serialization, and serving infrastructure.
+               - Pixel Icon: Orange isometric 3D tensor block structure
+               - Progress Bar: 87% proficiency in industrial model lifecycle
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="frameworks" data-skill-id="tensorflow" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: TensorFlow Isometric Tensor -->
+              <div class="pixel-icon-frame icon-tf" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="4" width="14" height="4" fill="#FF8A00"/>
+                  <rect x="10" y="8" width="4" height="12" fill="#E65100"/>
+                  <rect x="5" y="8" width="4" height="6" fill="#FFB74D"/>
+                  <rect x="15" y="8" width="4" height="6" fill="#FF6D00"/>
+                  <rect x="15" y="14" width="4" height="6" fill="#DD2C00"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-frame">FRAMEWORK</span>
+                <span class="pixel-rank-badge rank-expert">LVL 87</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">TensorFlow</h3>
+              <p class="skill-role-desc">Production ML &bull; Keras &amp; Graph Execution</p>
+              
+              <!-- Progress Bar: 87% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="TensorFlow Proficiency: 87%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">87%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="87">
+                  <div class="pixel-meter-fill fill-amber" style="width: 87%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Keras APIs</span>
+                <span class="pixel-tag-item">SavedModel</span>
+                <span class="pixel-tag-item">Distributed ML</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 11: SCIKIT-LEARN
+               Represents classical machine learning pipelines, preprocessing transformers,
+               decision boundaries, clustering metrics, cross-validation, and grid search.
+               - Pixel Icon: Cyan/orange scatter plot decision boundary matrix
+               - Progress Bar: 92% proficiency in statistical data science pipelines
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="frameworks" data-skill-id="sklearn" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Scikit-learn Decision Boundary -->
+              <div class="pixel-icon-frame icon-sklearn" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="2" height="18" fill="#94A3B8"/>
+                  <rect x="3" y="19" width="18" height="2" fill="#94A3B8"/>
+                  <rect x="6" y="15" width="3" height="3" fill="#38BDF8"/>
+                  <rect x="9" y="12" width="3" height="3" fill="#38BDF8"/>
+                  <rect x="7" y="9" width="3" height="3" fill="#38BDF8"/>
+                  <rect x="13" y="8" width="3" height="3" fill="#F97316"/>
+                  <rect x="17" y="5" width="3" height="3" fill="#F97316"/>
+                  <rect x="16" y="11" width="3" height="3" fill="#F97316"/>
+                  <rect x="11" y="4" width="2" height="14" fill="#FCD34D"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-frame">FRAMEWORK</span>
+                <span class="pixel-rank-badge rank-master">LVL 92</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Scikit-learn</h3>
+              <p class="skill-role-desc">ML Toolkits &bull; Pipelines &amp; Model Selection</p>
+              
+              <!-- Progress Bar: 92% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Scikit-learn Proficiency: 92%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">92%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="92">
+                  <div class="pixel-meter-fill fill-cyan" style="width: 92%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Pipelines</span>
+                <span class="pixel-tag-item">Preprocessing</span>
+                <span class="pixel-tag-item">Cross-Val</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 12: FASTAPI
+               Represents modern asynchronous Python backend development, RESTful APIs,
+               Pydantic type contracts, OpenAPI documentation, and high-concurrency microservices.
+               - Pixel Icon: Teal lightning bolt symbol of lightning-fast async performance
+               - Progress Bar: 90% proficiency in building production API endpoints
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="frameworks" data-skill-id="fastapi" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: FastAPI Lightning Surge -->
+              <div class="pixel-icon-frame icon-fastapi" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="12" y="2" width="4" height="4" fill="#14B8A6"/>
+                  <rect x="10" y="6" width="4" height="3" fill="#14B8A6"/>
+                  <rect x="7" y="9" width="9" height="3" fill="#2DD4BF"/>
+                  <rect x="8" y="12" width="5" height="3" fill="#2DD4BF"/>
+                  <rect x="7" y="15" width="4" height="3" fill="#14B8A6"/>
+                  <rect x="6" y="18" width="3" height="4" fill="#0D9488"/>
+                  <rect x="11" y="8" width="2" height="2" fill="#CCFBF1"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-frame">FRAMEWORK</span>
+                <span class="pixel-rank-badge rank-expert">LVL 90</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">FastAPI</h3>
+              <p class="skill-role-desc">Async REST APIs &bull; Microservices &amp; Pydantic</p>
+              
+              <!-- Progress Bar: 90% Expert Tier -->
+              <div class="pixel-meter-wrapper" aria-label="FastAPI Proficiency: 90%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">90%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="90">
+                  <div class="pixel-meter-fill fill-teal" style="width: 90%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Async / Await</span>
+                <span class="pixel-tag-item">Pydantic Schemas</span>
+                <span class="pixel-tag-item">OpenAPI Spec</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-expert">EXPERT</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 13: PANDAS
+               Represents structured data manipulation, DataFrames, ETL wrangling,
+               time-series analysis, aggregation grouping, and tabular data cleansing.
+               - Pixel Icon: Indigo pixelated data grid spreadsheet table
+               - Progress Bar: 94% proficiency in analytical data manipulation
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="tools" data-skill-id="pandas" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Pandas DataFrame Grid -->
+              <div class="pixel-icon-frame icon-pandas" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="18" fill="#1E1B4B"/>
+                  <rect x="4" y="4" width="16" height="4" fill="#818CF8"/>
+                  <rect x="4" y="9" width="5" height="5" fill="#4338CA"/>
+                  <rect x="10" y="9" width="10" height="5" fill="#6366F1"/>
+                  <rect x="4" y="15" width="5" height="5" fill="#4338CA"/>
+                  <rect x="10" y="15" width="10" height="5" fill="#4F46E5"/>
+                  <rect x="13" y="10" width="3" height="3" fill="#A5B4FC"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-tool">DATA / TOOL</span>
+                <span class="pixel-rank-badge rank-master">LVL 94</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Pandas</h3>
+              <p class="skill-role-desc">Data Wrangling &bull; DataFrames &amp; ETL Pipelines</p>
+              
+              <!-- Progress Bar: 94% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Pandas Proficiency: 94%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">94%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="94">
+                  <div class="pixel-meter-fill fill-indigo" style="width: 94%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">DataFrames</span>
+                <span class="pixel-tag-item">ETL Cleaning</span>
+                <span class="pixel-tag-item">Groupby &amp; Pivot</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 14: NUMPY
+               Represents vectorized multi-dimensional numerical computing, N-d arrays,
+               linear algebra matrices, Fourier transforms, and memory-efficient math.
+               - Pixel Icon: Sky blue 3D isometric tensor matrix cube
+               - Progress Bar: 92% proficiency in vectorized numerical processing
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="tools" data-skill-id="numpy" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: NumPy N-Dimensional Matrix -->
+              <div class="pixel-icon-frame icon-numpy" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="4" width="6" height="6" fill="#38BDF8"/>
+                  <rect x="14" y="4" width="6" height="6" fill="#0284C7"/>
+                  <rect x="4" y="14" width="6" height="6" fill="#0EA5E9"/>
+                  <rect x="14" y="14" width="6" height="6" fill="#38BDF8"/>
+                  <rect x="6" y="6" width="2" height="2" fill="#FFFFFF"/>
+                  <rect x="16" y="6" width="2" height="2" fill="#BAE6FD"/>
+                  <rect x="6" y="16" width="2" height="2" fill="#BAE6FD"/>
+                  <rect x="16" y="16" width="2" height="2" fill="#FFFFFF"/>
+                  <rect x="10" y="10" width="4" height="4" fill="#0369A1"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-tool">DATA / TOOL</span>
+                <span class="pixel-rank-badge rank-master">LVL 92</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">NumPy</h3>
+              <p class="skill-role-desc">Numerical Math &bull; Vectorized N-D Arrays</p>
+              
+              <!-- Progress Bar: 92% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="NumPy Proficiency: 92%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">92%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="92">
+                  <div class="pixel-meter-fill fill-cyan" style="width: 92%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Vectorization</span>
+                <span class="pixel-tag-item">Linear Algebra</span>
+                <span class="pixel-tag-item">Broadcasting</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 15: GIT
+               Represents distributed version control, atomic commits, branching
+               strategies, merge resolution, rebase hygiene, and local repo architecture.
+               - Pixel Icon: Rose pixel branching tree with commit graph nodes
+               - Progress Bar: 91% proficiency in source tree control & hygiene
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="tools" data-skill-id="git" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: Git Branching Commit Graph -->
+              <div class="pixel-icon-frame icon-git" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6" y="4" width="4" height="4" fill="#F43F5E"/>
+                  <rect x="7" y="8" width="2" height="8" fill="#F43F5E"/>
+                  <rect x="6" y="16" width="4" height="4" fill="#F43F5E"/>
+                  <rect x="9" y="10" width="4" height="2" fill="#FB7185"/>
+                  <rect x="13" y="8" width="2" height="4" fill="#FB7185"/>
+                  <rect x="14" y="6" width="4" height="4" fill="#F43F5E"/>
+                  <rect x="14" y="14" width="4" height="4" fill="#FDA4AF"/>
+                  <rect x="15" y="10" width="2" height="4" fill="#FB7185"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-tool">DATA / TOOL</span>
+                <span class="pixel-rank-badge rank-master">LVL 91</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">Git</h3>
+              <p class="skill-role-desc">Version Control &bull; Branch Workflows &amp; Rebasing</p>
+              
+              <!-- Progress Bar: 91% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="Git Proficiency: 91%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">91%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="91">
+                  <div class="pixel-meter-fill fill-rose" style="width: 91%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Branching</span>
+                <span class="pixel-tag-item">Merge Conflict</span>
+                <span class="pixel-tag-item">Rebase &amp; Log</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+
+          <!-- ========================================================
+               SKILL 16: GITHUB
+               Represents collaborative engineering: pull request reviews, CI/CD automated
+               actions, issue management, release staging, and open source collaboration.
+               - Pixel Icon: Silver pixel Octocat silhouette with kitty ears
+               - Progress Bar: 93% proficiency in remote repository collaboration
+               ======================================================== -->
+          <article class="skill-card pixel-card" data-category="tools" data-skill-id="github" role="listitem" tabindex="0">
+            <div class="pixel-card-header">
+              <!-- Pixel Art Icon: GitHub Octocat Silhouette -->
+              <div class="pixel-icon-frame icon-github" aria-hidden="true">
+                <svg class="pixel-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="4" width="3" height="3" fill="#E2E8F0"/>
+                  <rect x="16" y="4" width="3" height="3" fill="#E2E8F0"/>
+                  <rect x="6" y="7" width="12" height="10" fill="#E2E8F0"/>
+                  <rect x="8" y="17" width="8" height="3" fill="#E2E8F0"/>
+                  <rect x="8" y="10" width="2" height="2" fill="#0F172A"/>
+                  <rect x="14" y="10" width="2" height="2" fill="#0F172A"/>
+                  <rect x="10" y="13" width="4" height="2" fill="#94A3B8"/>
+                </svg>
+              </div>
+              <div class="pixel-card-meta">
+                <span class="pixel-cat-tag tag-tool">DATA / TOOL</span>
+                <span class="pixel-rank-badge rank-master">LVL 93</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-body">
+              <h3 class="skill-name">GitHub</h3>
+              <p class="skill-role-desc">Collaboration &bull; CI/CD Pipelines &amp; PRs</p>
+              
+              <!-- Progress Bar: 93% Master Tier -->
+              <div class="pixel-meter-wrapper" aria-label="GitHub Proficiency: 93%">
+                <div class="pixel-meter-meta">
+                  <span class="pixel-meter-label">MASTERY</span>
+                  <span class="pixel-meter-pct">93%</span>
+                </div>
+                <div class="pixel-meter-track" data-percent="93">
+                  <div class="pixel-meter-fill fill-indigo" style="width: 93%;"></div>
+                  <div class="pixel-meter-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Competency Tag List -->
+              <div class="pixel-tag-list">
+                <span class="pixel-tag-item">Pull Requests</span>
+                <span class="pixel-tag-item">GitHub Actions</span>
+                <span class="pixel-tag-item">Code Review</span>
+              </div>
+            </div>
+
+            <div class="pixel-card-footer">
+              <span class="pixel-inspect-link">► INSPECT SKILL</span>
+              <span class="pixel-tier-label tier-master">MASTER</span>
+            </div>
+          </article>
+
+        </div>
+        <!-- End Main Skills Grid -->
+
+        <!-- ========================================================
+             INTERACTIVE RETRO SKILL INSPECTOR HUD & TERMINAL
+             Allows user to click or hover any skill card to examine
+             in-depth software engineering telemetry, benchmark metrics,
+             and live syntax snippets.
+             ======================================================== -->
+        <aside class="pixel-inspector-hud" id="pixel-inspector" aria-label="Skill Detail Inspector">
+          <div class="inspector-header">
+            <div class="inspector-title-wrap">
+              <span class="inspector-dot red"></span>
+              <span class="inspector-dot yellow"></span>
+              <span class="inspector-dot green"></span>
+              <span class="inspector-title">[RETRO TERMINAL: SKILL_INSPECTOR.EXE]</span>
+            </div>
+            <div class="inspector-action-status">
+              <span class="pixel-blink-text">&bull; READY</span>
+            </div>
+          </div>
+
+          <div class="inspector-body">
+            <!-- Left Info Pane -->
+            <div class="inspector-left">
+              <div class="inspector-hero">
+                <div class="inspector-icon-wrap" id="inspector-icon-display">
+                  <!-- Injected via JS -->
+                </div>
+                <div class="inspector-title-block">
+                  <span class="inspector-kicker" id="inspector-category-kicker">CORE LANGUAGE</span>
+                  <h3 class="inspector-skill-title" id="inspector-skill-title">Python</h3>
+                  <div class="inspector-meta-pills">
+                    <span class="pixel-pill" id="inspector-rank-pill">RANK: MASTER</span>
+                    <span class="pixel-pill text-cyan" id="inspector-level-pill">LVL: 95/100</span>
+                    <span class="pixel-pill" id="inspector-status-pill">STATUS: EQUIPPED</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="inspector-desc" id="inspector-desc">
+                Primary multi-paradigm language applied in developing high-throughput AI pipelines, asynchronous REST APIs, and automated sensor data streaming architectures.
+              </p>
+
+              <!-- Real-world Application Checklist -->
+              <div class="inspector-competencies">
+                <span class="inspector-subhead">ENGINEERING PROFICIENCIES:</span>
+                <ul class="inspector-checklist" id="inspector-checklist">
+                  <li>Dynamic object-oriented programming &amp; clean modular modules</li>
+                  <li>Deep learning model training and hyperparameter search</li>
+                  <li>High-performance asynchronous data fetching &amp; stream processing</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Telemetry & Benchmark Pane -->
+            <div class="inspector-right">
+              <span class="inspector-subhead">BENCHMARK METRICS &bull; 8-BIT TELEMETRY</span>
+              <div class="inspector-metrics-grid">
+                <div class="inspector-stat">
+                  <div class="inspector-stat-header">
+                    <span>PRODUCTION READINESS</span>
+                    <span id="metric-prod">96%</span>
+                  </div>
+                  <div class="pixel-mini-meter">
+                    <div class="pixel-mini-fill" id="metric-prod-fill" style="width: 96%;"></div>
+                  </div>
+                </div>
+                <div class="inspector-stat">
+                  <div class="inspector-stat-header">
+                    <span>ALGORITHMIC DEPTH</span>
+                    <span id="metric-algo">94%</span>
+                  </div>
+                  <div class="pixel-mini-meter">
+                    <div class="pixel-mini-fill fill-purple" id="metric-algo-fill" style="width: 94%;"></div>
+                  </div>
+                </div>
+                <div class="inspector-stat">
+                  <div class="inspector-stat-header">
+                    <span>SYSTEM OPTIMIZATION</span>
+                    <span id="metric-opt">92%</span>
+                  </div>
+                  <div class="pixel-mini-meter">
+                    <div class="pixel-mini-fill fill-amber" id="metric-opt-fill" style="width: 92%;"></div>
+                  </div>
+                </div>
+                <div class="inspector-stat">
+                  <div class="inspector-stat-header">
+                    <span>TEST &amp; CLEAN CODE</span>
+                    <span id="metric-clean">98%</span>
+                  </div>
+                  <div class="pixel-mini-meter">
+                    <div class="pixel-mini-fill fill-teal" id="metric-clean-fill" style="width: 98%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terminal Code Preview Snippet -->
+              <div class="inspector-code-box">
+                <div class="inspector-code-header">
+                  <span class="code-tab-name" id="inspector-code-filename">python_pipeline.py</span>
+                  <button id="inspector-run-test-btn" class="pixel-run-btn" title="Run simulated test">
+                    <span>▶ RUN TEST</span>
+                  </button>
+                </div>
+                <pre class="inspector-code-pre"><code id="inspector-code-snippet"><span class="token-keyword">import</span> torch, asyncio
+<span class="token-keyword">from</span> pydantic <span class="token-keyword">import</span> BaseModel
+
+<span class="token-keyword">class</span> <span class="token-type">InferencePipeline</span>:
+    <span class="token-keyword">def</span> <span class="token-function">__init__</span>(self, model_name: str):
+        self.device = <span class="token-string">"cuda"</span> <span class="token-keyword">if</span> torch.cuda.is_available() <span class="token-keyword">else</span> <span class="token-string">"cpu"</span>
+        self.engine = load_weights(model_name).to(self.device)
+
+    <span class="token-keyword">async def</span> <span class="token-function">predict</span>(self, tensor_payload):
+        <span class="token-keyword">return</span> <span class="token-keyword">await</span> self.engine.forward(tensor_payload)</code></pre>
+                <div class="inspector-terminal-log" id="inspector-log" style="display: none;">
+                  <span class="log-cursor">&gt;</span> <span id="inspector-log-text">Running validation test... OK! [0.012s]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- End Interactive Retro Skill Inspector HUD -->
+
+      </div>
+    </section>
+    <!-- SKILLS SECTION END -->
+
+
+    <!-- ========================================================
+         4. TIMELINE / EDUCATION SECTION
+         Education milestones, technical projects, and journey
+         ======================================================== -->
+    <!-- TIMELINE SECTION START -->
+    <section class="timeline-section section-padding" id="timeline" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Education &amp; Journey</span>
+          <h2 id="timeline-title" class="section-title">Education &amp; Milestones</h2>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Item 1: Project Milestone -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 — 2025</span>
+              <h3 class="timeline-role">Rain Detection and Alert System</h3>
+              <h4 class="timeline-company">Academic Technical Project</h4>
+              <p class="timeline-desc">
+                Engineered an end-to-end sensor-based rainfall detection and alert notification prototype. Integrated hardware precipitation sensors with automated programming logic to deliver prompt hazard warnings.
+              </p>
+              <div class="timeline-tags">
+                <span class="mini-tag">Python</span>
+                <span class="mini-tag">C</span>
+                <span class="mini-tag">Sensors</span>
+                <span class="mini-tag">Hardware Alert Logic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Pre-University Education -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 — 2025</span>
+              <h3 class="timeline-role">Second PUC (Science &amp; Computer Science)</h3>
+              <h4 class="timeline-company">Raghavendra Hi-Tech PU College, Davanagere</h4>
+              <p class="timeline-desc">
+                Completed Pre-University course with academic excellence (76%). Built foundational depth in Computer Science, Mathematics, Physics, and analytical logic.
+              </p>
+              <div class="timeline-tags">
+                <span class="mini-tag">Computer Science</span>
+                <span class="mini-tag">Mathematics</span>
+                <span class="mini-tag">CGPA: 76%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Secondary School Education -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2021 — 2023</span>
+              <h3 class="timeline-role">Secondary School Examination (10th)</h3>
+              <h4 class="timeline-company">KRCR School, Chikkamadal, Channagiri</h4>
+              <p class="timeline-desc">
+                Graduated 10th standard with strong scholastic achievement (79%), cultivating deep interest in scientific reasoning, mathematics, and technological innovation.
+              </p>
+              <div class="timeline-tags">
+                <span class="mini-tag">General Science</span>
+                <span class="mini-tag">Mathematics</span>
+                <span class="mini-tag">CGPA: 79%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- TIMELINE SECTION END -->
+
+
+    <!-- ========================================================
+         5. PROJECTS SECTION
+         Featured software projects, engineering works, and case studies
+         ======================================================== -->
+    <!-- PROJECTS SECTION START -->
+    <section class="projects-section section-padding" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Portfolio</span>
+          <h2 id="projects-title" class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project Card 1: Rain Detection System -->
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="preview-placeholder">
+                <span class="project-badge">Featured IoT Project</span>
+                <span class="preview-icon">🌧️</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Rain Detection and Alert System</h3>
+              <p class="project-description">
+                Designed a sensor-driven embedded alert mechanism capable of accurately detecting precipitation in real time and automatically sounding alerts to prevent water damage and warn local residents.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">C</span>
+                <span class="tag">Sensors</span>
+                <span class="tag">Automation</span>
+              </div>
+              <div class="project-actions">
+                <a href="#about" class="project-btn" aria-label="View project details in About section">Project Overview &rarr;</a>
+                <a href="resume2.pdf" class="project-btn secondary" download="Tanuja_MC_Resume.pdf" aria-label="Download resume for project info">Resume Details &#8599;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2: Interactive Web Portfolio -->
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="preview-placeholder">
+                <span class="project-badge">Web Engineering</span>
+                <span class="preview-icon">💻</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Modern Minimalist Developer Portfolio</h3>
+              <p class="project-description">
+                An ultra-responsive, accessible personal portfolio website built with semantic HTML5, modern vanilla CSS with CSS variables, auto night mode detection, and rich micro-interactions.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive UI</span>
+              </div>
+              <div class="project-actions">
+                <a href="#hero" class="project-btn" aria-label="View live demo">Live Site &uarr;</a>
+                <a href="#contact" class="project-btn secondary" aria-label="Connect for source code">Inquire &#8599;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3: Algorithmic Logic Suite -->
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="preview-placeholder">
+                <span class="project-badge">Algorithms &amp; OOP</span>
+                <span class="preview-icon">🧩</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Data Structures &amp; OOP Algorithms Suite</h3>
+              <p class="project-description">
+                A structured collection of algorithms, object-oriented design solutions, and modular data processing utilities implemented across Java and Python with clean code practices.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tag">Java</span>
+                <span class="tag">Python</span>
+                <span class="tag">OOP</span>
+                <span class="tag">Data Structures</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View on GitHub">GitHub &rarr;</a>
+                <a href="#contact" class="project-btn secondary" aria-label="Discuss algorithms with Tanuja">Contact &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECTS SECTION END -->
+
+
+    <!-- ========================================================
+         6. CONTACT SECTION
+         Inquiry form, contact info, and reach out channels
+         ======================================================== -->
+    <!-- CONTACT SECTION START -->
+    <section class="contact-section section-padding" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 id="contact-title" class="section-title">Let's Connect &amp; Collaborate</h2>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-details">
+            <h3>Contact Information</h3>
+            <p>
+              I am open to software engineering internships, entry-level developer positions, and technical collaborations. Feel free to reach out via phone, email, or LinkedIn!
+            </p>
+            <div class="contact-methods">
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:+917019782364">+91 7019782364</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <p>Channagiri, Davanagere, Karnataka, India</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">💼</span>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <p><a href="https://www.linkedin.com/in/tanuja-chandranaik-583415441" target="_blank" rel="noopener noreferrer">tanuja-chandranaik-583415441</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📄</span>
+                <div>
+                  <strong>Resume</strong>
+                  <p><a href="resume2.pdf" download="Tanuja_MC_Resume.pdf">Download Resume (PDF)</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Placeholder -->
+          <form class="contact-form" id="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you, Tanuja will get back to you shortly!');">
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="your.email@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Hello Tanuja, I would like to discuss an opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btn-submit-contact">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT SECTION END -->
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER SECTION
+       Copyright, quick links, back to top button
+       ======================================================== -->
+  <!-- FOOTER SECTION START -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="copyright">&copy; <span id="current-year">2026</span> Tanuja M C. All rights reserved.</p>
+        <p class="footer-subtext">Software Engineer &bull; Clean Architecture &amp; Modern Web.</p>
+      </div>
+
+      <div class="footer-right">
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="#hero">Back to Top &uarr;</a></li>
+            <li><a href="https://www.linkedin.com/in/tanuja-chandranaik-583415441" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="resume2.pdf" download="Tanuja_MC_Resume.pdf">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER SECTION END -->
+
+  <!-- Main JavaScript File -->
+  <script>
+// EMBEDDED COMPLETE SCRIPT
+// ========================================================
+// PORTFOLIO JAVASCRIPT: NIGHT MODE TOGGLE & INTERACTIONS
+// Uses CSS Media Query default detection with manual override
+// ========================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const heroThemeToggleBtn = document.getElementById('hero-theme-toggle');
+  const themeStatusText = document.getElementById('theme-status-text');
+  const htmlElement = document.documentElement;
+
+  // Media Query for Browser Default Theme Detection
+  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+  // Check if user previously saved a manual preference
+  const savedTheme = localStorage.getItem('theme');
+
+  function getEffectiveTheme() {
+    if (savedTheme) {
+      return savedTheme;
+    }
+    return darkModeMediaQuery.matches ? 'dark' : 'light';
+  }
+
+  function updateThemeUI(theme, isAuto = false) {
+    if (theme) {
+      htmlElement.setAttribute('data-theme', theme);
+    } else {
+      htmlElement.removeAttribute('data-theme');
+    }
+
+    const currentMode = theme || (darkModeMediaQuery.matches ? 'dark' : 'light');
+    const labelText = isAuto 
+      ? (currentMode === 'dark' ? 'AUTO [NIGHT]' : 'AUTO [LIGHT]') 
+      : (currentMode === 'dark' ? 'NIGHT' : 'LIGHT');
+
+    if (themeStatusText) {
+      themeStatusText.textContent = labelText;
+    }
+
+    const nextLabel = currentMode === 'dark' ? 'Switch to light mode' : 'Switch to night mode';
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute('aria-label', nextLabel);
+      themeToggleBtn.setAttribute('title', nextLabel);
+    }
+    if (heroThemeToggleBtn) {
+      heroThemeToggleBtn.setAttribute('aria-label', nextLabel);
+      heroThemeToggleBtn.setAttribute('title', nextLabel);
+    }
+  }
+
+  // Initialize theme on page load
+  if (savedTheme) {
+    updateThemeUI(savedTheme, false);
+  } else {
+    // Rely on CSS media query detection by default
+    updateThemeUI(darkModeMediaQuery.matches ? 'dark' : 'light', true);
+  }
+
+  // Listen to browser / system default theme changes live
+  darkModeMediaQuery.addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      const newSystemTheme = e.matches ? 'dark' : 'light';
+      updateThemeUI(newSystemTheme, true);
+    }
+  });
+
+  // Toggle function for both header and in-hero buttons
+  function toggleTheme() {
+    const currentTheme = htmlElement.getAttribute('data-theme') || (darkModeMediaQuery.matches ? 'dark' : 'light');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    localStorage.setItem('theme', newTheme);
+    updateThemeUI(newTheme, false);
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+  }
+
+  if (heroThemeToggleBtn) {
+    heroThemeToggleBtn.addEventListener('click', toggleTheme);
+  }
+
+  // Mobile navigation drawer toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (mobileMenuBtn && navMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Dynamic copyright year
+  const yearElement = document.getElementById('current-year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  // ========================================================
+  // 3. PIXEL ART SKILLS SECTION: INTERACTIVE ENGINE
+  // - Category filtering (All, Languages, AI/ML, Frameworks, Tools)
+  // - Real-time keyword search
+  // - Interactive Retro Skill Inspector HUD & Telemetry
+  // - 8-Bit Web Audio Sound Effects Engine
+  // - Animated 10-segment stamina progress bar fill
+  // ========================================================
+
+  const skillsData = {
+    python: {
+      name: "Python",
+      kicker: "CORE PROGRAMMING LANGUAGE",
+      rank: "RANK: MASTER",
+      level: "LVL: 95/100",
+      status: "STATUS: EQUIPPED",
+      desc: "Primary multi-paradigm language applied in developing high-throughput AI pipelines, asynchronous REST APIs, and automated sensor data streaming architectures.",
+      checklist: [
+        "Dynamic object-oriented programming & clean modular modules",
+        "Deep learning model training and hyperparameter search",
+        "High-performance asynchronous data fetching & stream processing"
+      ],
+      metrics: { prod: 96, algo: 94, opt: 92, clean: 98 },
+      filename: "python_pipeline.py",
+      code: `import torch, asyncio
+from pydantic import BaseModel
+
+class InferencePipeline:
+    def __init__(self, model_name: str):
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.engine = load_weights(model_name).to(self.device)
+
+    async def predict(self, tensor_payload):
+        return await self.engine.forward(tensor_payload)`
+    },
+    cpp: {
+      name: "C++",
+      kicker: "SYSTEMS & ALGORITHMIC COMPUTING",
+      rank: "RANK: EXPERT",
+      level: "LVL: 88/100",
+      status: "STATUS: READY",
+      desc: "Low-level systems programming emphasizing RAII, manual memory management, pointer safety, and high-frequency sensor signal processing.",
+      checklist: [
+        "Cache-efficient memory structures & custom allocators",
+        "STL container optimization & deterministic latency",
+        "Embedded hardware interfacing & sensor loop interrupts"
+      ],
+      metrics: { prod: 91, algo: 95, opt: 96, clean: 90 },
+      filename: "sensor_fast_buffer.cpp",
+      code: `#include <vector>
+#include <algorithm>
+
+template <typename T>
+class CircularSensorBuffer {
+private:
+    std::vector<T> data_;
+    size_t head_ = 0;
+public:
+    explicit CircularSensorBuffer(size_t capacity) : data_(capacity, 0) {}
+    inline void push(T val) noexcept {
+        data_[head_ = (head_ + 1) % data_.size()] = val;
+    }
+};`
+    },
+    sql: {
+      name: "SQL",
+      kicker: "RELATIONAL DATABASE ARCHITECTURE",
+      rank: "RANK: EXPERT",
+      level: "LVL: 90/100",
+      status: "STATUS: READY",
+      desc: "Relational database modeling, query tuning, indexing strategies, analytical window functions, and transactional integrity guarantees.",
+      checklist: [
+        "Complex multi-table analytical joins & CTE subqueries",
+        "B-tree and composite indexing for high-QPS lookups",
+        "Normalized relational schema & foreign key integrity"
+      ],
+      metrics: { prod: 93, algo: 89, opt: 94, clean: 95 },
+      filename: "query_analytics.sql",
+      code: `WITH TelemetryRanked AS (
+  SELECT 
+    device_id, reading_val, recorded_at,
+    ROW_NUMBER() OVER (PARTITION BY device_id ORDER BY recorded_at DESC) as rnk
+  FROM sensor_readings
+  WHERE recorded_at >= NOW() - INTERVAL '24 HOURS'
+)
+SELECT device_id, reading_val FROM TelemetryRanked WHERE rnk = 1;`
+    },
+    ml: {
+      name: "Machine Learning",
+      kicker: "STATISTICAL AI & PREDICTIVE MODELS",
+      rank: "RANK: MASTER",
+      level: "LVL: 92/100",
+      status: "STATUS: READY",
+      desc: "End-to-end predictive modeling covering supervised classification, regression, dimensionality reduction, and cross-validation pipelines.",
+      checklist: [
+        "Hypothesis testing, outlier detection & feature engineering",
+        "Ensemble modeling: Random Forests, Gradient Boosted Trees",
+        "Rigorous hyperparameter tuning & precision-recall trade-offs"
+      ],
+      metrics: { prod: 92, algo: 94, opt: 91, clean: 94 },
+      filename: "ml_ensemble_pipeline.py",
+      code: `from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+pipeline = Pipeline([
+    ('scaler', StandardScaler()),
+    ('model', GradientBoostingClassifier(n_estimators=150, learning_rate=0.05))
+])
+pipeline.fit(X_train, y_train)
+accuracy = pipeline.score(X_test, y_test)`
+    },
+    dl: {
+      name: "Deep Learning",
+      kicker: "NEURAL NETWORK ARCHITECTURES",
+      rank: "RANK: EXPERT",
+      level: "LVL: 90/100",
+      status: "STATUS: READY",
+      desc: "Deep neural representations, custom loss objectives, backpropagation mathematical dynamics, and gradient descent optimization routines.",
+      checklist: [
+        "Multi-layer perceptron & deep residual block design",
+        "AdamW & Cosine Annealing learning rate scheduling",
+        "Overfitting mitigation via Dropout & Batch Normalization"
+      ],
+      metrics: { prod: 90, algo: 93, opt: 91, clean: 93 },
+      filename: "neural_backprop.py",
+      code: `import torch
+import torch.nn as nn
+
+class DeepResidualBlock(nn.Module):
+    def __init__(self, channels: int):
+        super().__init__()
+        self.fc1 = nn.Linear(channels, channels)
+        self.act = nn.GELU()
+        self.norm = nn.LayerNorm(channels)
+
+    def forward(self, x):
+        return x + self.norm(self.act(self.fc1(x)))`
+    },
+    nlp: {
+      name: "NLP",
+      kicker: "NATURAL LANGUAGE PROCESSING",
+      rank: "RANK: EXPERT",
+      level: "LVL: 88/100",
+      status: "STATUS: READY",
+      desc: "Computational linguistics, BPE tokenization, dense semantic embeddings, similarity indexing, and transformer attention mechanisms.",
+      checklist: [
+        "Subword tokenization & vocabulary distribution analysis",
+        "Vector cosine similarity & semantic retrieval",
+        "Text classification, sentiment analysis & entity extraction"
+      ],
+      metrics: { prod: 89, algo: 91, opt: 88, clean: 92 },
+      filename: "semantic_embedder.py",
+      code: `from sentence_transformers import SentenceTransformer
+import numpy as np
+
+encoder = SentenceTransformer('all-MiniLM-L6-v2')
+doc_vectors = encoder.encode(["Document A", "Document B"])
+query_vector = encoder.encode(["Search query"])
+
+cosine_sim = np.dot(doc_vectors, query_vector.T)`
+    },
+    cv: {
+      name: "Computer Vision",
+      kicker: "SPATIAL IMAGE PERCEPTION",
+      rank: "RANK: ADVANCED",
+      level: "LVL: 86/100",
+      status: "STATUS: READY",
+      desc: "Image tensor preprocessing, convolution kernels, feature maps, object bounding reticles, and spatial neural architectures.",
+      checklist: [
+        "Convolutional Neural Networks (CNNs) & feature filters",
+        "Image augmentation, normalization, & tensor reshaping",
+        "Precipitation & sensor camera optical pattern detection"
+      ],
+      metrics: { prod: 86, algo: 90, opt: 87, clean: 91 },
+      filename: "vision_cnn_module.py",
+      code: `import torch.nn as nn
+
+class ConvFeatureExtractor(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv = nn.Sequential(
+            nn.Conv2d(3, 32, kernel_size=3, padding=1),
+            nn.BatchNorm2d(32),
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2)
+        )`
+    },
+    genai: {
+      name: "Generative AI",
+      kicker: "FRONTIER LLMS & AGENTIC ARCHITECTURES",
+      rank: "RANK: MASTER",
+      level: "LVL: 91/100",
+      status: "STATUS: READY",
+      desc: "Retrieval-augmented generation (RAG) pipelines, context caching, prompt evaluation benchmarks, and multi-step agent orchestration.",
+      checklist: [
+        "Vector DB hybrid search & context window augmentation",
+        "Few-shot structured JSON schema prompting",
+        "Agent reasoning loops & function tool calling"
+      ],
+      metrics: { prod: 93, algo: 92, opt: 90, clean: 95 },
+      filename: "rag_orchestrator.py",
+      code: `async def query_rag_engine(user_prompt: str, vector_store):
+    relevant_chunks = await vector_store.search(user_prompt, k=4)
+    system_ctx = "\\n".join([c.text for c in relevant_chunks])
+    return await llm_client.generate(
+        system_instruction=f"Context:\\n{system_ctx}",
+        prompt=user_prompt
+    )`
+    },
+    pytorch: {
+      name: "PyTorch",
+      kicker: "DEEP LEARNING TENSOR FRAMEWORK",
+      rank: "RANK: MASTER",
+      level: "LVL: 93/100",
+      status: "STATUS: READY",
+      desc: "Dynamic tensor computation, automatic differentiation (Autograd), CUDA tensor acceleration, and modular nn.Module architectures.",
+      checklist: [
+        "Custom autograd backward functions & tensor operations",
+        "Multi-GPU distributed training with DDP",
+        "TorchScript JIT model compilation & latency reduction"
+      ],
+      metrics: { prod: 94, algo: 93, opt: 95, clean: 93 },
+      filename: "train_loop_step.py",
+      code: `import torch
+
+scaler = torch.cuda.amp.GradScaler()
+for batch_x, batch_y in dataloader:
+    optimizer.zero_grad(set_to_none=True)
+    with torch.cuda.amp.autocast():
+        loss = criterion(model(batch_x.cuda()), batch_y.cuda())
+    scaler.scale(loss).backward()
+    scaler.step(optimizer)
+    scaler.update()`
+    },
+    tensorflow: {
+      name: "TensorFlow",
+      kicker: "PRODUCTION ML & GRAPH EXECUTION",
+      rank: "RANK: EXPERT",
+      level: "LVL: 87/100",
+      status: "STATUS: READY",
+      desc: "Static graph computation with tf.function, Keras functional API, SavedModel format, and serving production inference containers.",
+      checklist: [
+        "Keras functional API & custom callbacks",
+        "TensorFlow Dataset (tf.data) streaming pipelines",
+        "Model quantization & TFLite embedded deployment"
+      ],
+      metrics: { prod: 90, algo: 88, opt: 91, clean: 90 },
+      filename: "tf_saved_model.py",
+      code: `import tensorflow as tf
+
+@tf.function(input_signature=[tf.TensorSpec(shape=[None, 32], dtype=tf.float32)])
+def serve_inference(x_input):
+    return export_model(x_input)
+
+tf.saved_model.save(export_model, "prod_export/v1", signatures={'serving_default': serve_inference})`
+    },
+    sklearn: {
+      name: "Scikit-learn",
+      kicker: "CLASSICAL MACHINE LEARNING PIPELINES",
+      rank: "RANK: MASTER",
+      level: "LVL: 92/100",
+      status: "STATUS: READY",
+      desc: "Pre-processing transformations, scikit-learn composable pipelines, classification, cross-validated hyperparameter grids, and model evaluation metrics.",
+      checklist: [
+        "ColumnTransformer heterogeneous preprocessing",
+        "Stratified K-Fold validation & ROC-AUC evaluation",
+        "Principal Component Analysis (PCA) dimensionality reduction"
+      ],
+      metrics: { prod: 93, algo: 92, opt: 91, clean: 96 },
+      filename: "sklearn_pipeline.py",
+      code: `from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+
+preprocessor = ColumnTransformer(transformers=[
+    ('num', StandardScaler(), num_cols),
+    ('cat', OneHotEncoder(drop='first'), cat_cols)
+])
+full_pipeline = Pipeline([('prep', preprocessor), ('clf', LogisticRegression())])`
+    },
+    fastapi: {
+      name: "FastAPI",
+      kicker: "HIGH-PERFORMANCE ASYNC REST APIS",
+      rank: "RANK: EXPERT",
+      level: "LVL: 90/100",
+      status: "STATUS: READY",
+      desc: "High-throughput asynchronous Python microservices, strict Pydantic v2 schemas, automated OpenAPI documentation, and dependency injection.",
+      checklist: [
+        "Non-blocking async event loop endpoints",
+        "Strict request/response type validation via Pydantic",
+        "JWT authentication middleware & CORS protection"
+      ],
+      metrics: { prod: 95, algo: 88, opt: 93, clean: 97 },
+      filename: "api_routes.py",
+      code: `from fastapi import FastAPI, Depends, HTTPException
+from pydantic import BaseModel
+
+app = FastAPI(title="Sensor & AI Inference API", version="2.0")
+
+class InferencePayload(BaseModel):
+    sensor_id: str
+    readings: list[float]
+
+@app.post("/api/v1/predict")
+async def predict_status(payload: InferencePayload):
+    return {"status": "ok", "alert_level": analyze(payload.readings)}`
+    },
+    pandas: {
+      name: "Pandas",
+      kicker: "DATA WRANGLING & DATAFRAMES",
+      rank: "RANK: MASTER",
+      level: "LVL: 94/100",
+      status: "STATUS: READY",
+      desc: "DataFrame manipulation, ETL cleaning pipelines, vectorized datetime parsing, group aggregations, and multi-index reshaping.",
+      checklist: [
+        "Efficient vectorized masking & data sanitization",
+        "Resampling, rolling windows & temporal sensor analysis",
+        "Merge, concat, and pivot tables without data loss"
+      ],
+      metrics: { prod: 96, algo: 91, opt: 93, clean: 95 },
+      filename: "pandas_etl_cleaning.py",
+      code: `import pandas as pd
+
+df = pd.read_csv("telemetry_logs.csv", parse_dates=["timestamp"])
+df["clean_val"] = df["reading"].clip(lower=0.0, upper=100.0)
+hourly_agg = df.set_index("timestamp").resample("1H")["clean_val"].agg(["mean", "max", "count"])
+print(hourly_agg.head())`
+    },
+    numpy: {
+      name: "NumPy",
+      kicker: "VECTORIZED NUMERICAL COMPUTING",
+      rank: "RANK: MASTER",
+      level: "LVL: 92/100",
+      status: "STATUS: READY",
+      desc: "Multi-dimensional ndarray operations, broadcasting arithmetic, matrix linear algebra decompositions, and low-level memory striding.",
+      checklist: [
+        "Vectorized broadcasting eliminating Python loop bottlenecks",
+        "Linear algebra matrix dot products & eigenvalues",
+        "Fast Fourier Transforms (FFT) for sensor wave analysis"
+      ],
+      metrics: { prod: 94, algo: 95, opt: 97, clean: 94 },
+      filename: "numpy_broadcasting.py",
+      code: `import numpy as np
+
+sensor_matrix = np.random.randn(1000, 64)
+weights = np.random.randn(64, 16)
+# Vectorized matrix transformation with zero loop overhead
+normalized = (sensor_matrix - sensor_matrix.mean(axis=0)) / sensor_matrix.std(axis=0)
+projection = np.dot(normalized, weights)`
+    },
+    git: {
+      name: "Git",
+      kicker: "DISTRIBUTED VERSION CONTROL",
+      rank: "RANK: MASTER",
+      level: "LVL: 91/100",
+      status: "STATUS: READY",
+      desc: "Source tree hygiene, atomic commit conventions, interactive rebasing, branch management, cherry-picking, and merge conflict resolution.",
+      checklist: [
+        "Feature branch lifecycle & git flow conventions",
+        "Interactive rebase (squash / reword) for clean linear history",
+        "Git bisect for rapid regression bug localization"
+      ],
+      metrics: { prod: 95, algo: 90, opt: 92, clean: 98 },
+      filename: "git_workflow.sh",
+      code: `# Branch hygiene & atomic rebase workflow
+git checkout -b feature/sensor-alert-pipeline
+git add -p
+git commit -m "feat(sensor): implement non-blocking rain threshold alerts"
+git fetch origin main && git rebase -i origin/main`
+    },
+    github: {
+      name: "GitHub",
+      kicker: "COLLABORATIVE CI/CD & REPO OPS",
+      rank: "RANK: MASTER",
+      level: "LVL: 93/100",
+      status: "STATUS: READY",
+      desc: "Collaborative software engineering: pull request reviews, GitHub Actions automation, release artifact packaging, and security secret scanning.",
+      checklist: [
+        "Automated GitHub Actions CI/CD matrix testing",
+        "Detailed Pull Request documentation & code review rigor",
+        "Protected branch rules & automated vulnerability alerts"
+      ],
+      metrics: { prod: 97, algo: 89, opt: 92, clean: 98 },
+      filename: "ci_pipeline.yml",
+      code: `name: Continuous Integration & Verification
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -r requirements.txt && pytest --cov=src`
+    }
+  };
+
+  // ----------------------------------------------------
+  // 8-BIT WEB AUDIO SFX ENGINE
+  // ----------------------------------------------------
+  let audioCtx = null;
+  let sfxEnabled = localStorage.getItem('pixel_sfx') === 'true';
+  const sfxToggleBtn = document.getElementById('pixel-sfx-toggle');
+
+  function updateSfxButtonUI() {
+    if (!sfxToggleBtn) return;
+    const icon = sfxToggleBtn.querySelector('.sfx-icon');
+    const text = sfxToggleBtn.querySelector('.sfx-text');
+    if (sfxEnabled) {
+      if (icon) icon.textContent = '🔊';
+      if (text) text.textContent = 'SFX: ON';
+      sfxToggleBtn.classList.add('active-sfx');
+    } else {
+      if (icon) icon.textContent = '🔇';
+      if (text) text.textContent = 'SFX: OFF';
+      sfxToggleBtn.classList.remove('active-sfx');
+    }
+  }
+  updateSfxButtonUI();
+
+  if (sfxToggleBtn) {
+    sfxToggleBtn.addEventListener('click', () => {
+      sfxEnabled = !sfxEnabled;
+      localStorage.setItem('pixel_sfx', sfxEnabled);
+      updateSfxButtonUI();
+      if (sfxEnabled) {
+        play8BitSound(587.33, 'triangle', 0.08); // D5 chime
+      }
+    });
+  }
+
+  function initAudioContext() {
+    if (!audioCtx) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (AudioContextClass) {
+        audioCtx = new AudioContextClass();
+      }
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  function play8BitSound(freq, type = 'square', duration = 0.05) {
+    if (!sfxEnabled) return;
+    try {
+      initAudioContext();
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    } catch (e) {
+      // Audio autoplay policy fallback
+    }
+  }
+
+  function playArpeggio() {
+    if (!sfxEnabled) return;
+    const notes = [523.25, 659.25, 783.99]; // C5, E5, G5
+    notes.forEach((f, i) => {
+      setTimeout(() => play8BitSound(f, 'square', 0.06), i * 50);
+    });
+  }
+
+  // ----------------------------------------------------
+  // FILTERING & LIVE SEARCH
+  // ----------------------------------------------------
+  const filterTabs = document.querySelectorAll('.pixel-tab');
+  const skillCards = document.querySelectorAll('.pixel-card');
+  const searchInput = document.getElementById('pixel-skill-search');
+  const searchClearBtn = document.getElementById('pixel-search-clear');
+  const activeCountEl = document.getElementById('hud-active-count');
+
+  let currentCategory = 'all';
+  let searchQuery = '';
+
+  function applyFilters() {
+    let visibleCount = 0;
+    const q = searchQuery.toLowerCase().trim();
+
+    skillCards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      const text = card.textContent.toLowerCase();
+
+      const matchesCat = (currentCategory === 'all' || category === currentCategory);
+      const matchesSearch = (!q || text.includes(q));
+
+      if (matchesCat && matchesSearch) {
+        card.classList.remove('filtered-out');
+        visibleCount++;
+      } else {
+        card.classList.add('filtered-out');
+      }
+    });
+
+    if (activeCountEl) {
+      activeCountEl.textContent = visibleCount;
+    }
+  }
+
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      filterTabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      currentCategory = tab.getAttribute('data-filter') || 'all';
+      play8BitSound(440, 'triangle', 0.04);
+      applyFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      if (searchClearBtn) {
+        searchClearBtn.style.display = searchQuery ? 'block' : 'none';
+      }
+      applyFilters();
+    });
+  }
+
+  if (searchClearBtn) {
+    searchClearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      searchClearBtn.style.display = 'none';
+      searchInput.focus();
+      applyFilters();
+    });
+  }
+
+  // ----------------------------------------------------
+  // RETRO SKILL INSPECTOR HUD SYNC
+  // ----------------------------------------------------
+  const inspectorIconWrap = document.getElementById('inspector-icon-display');
+  const inspectorKicker = document.getElementById('inspector-category-kicker');
+  const inspectorTitle = document.getElementById('inspector-skill-title');
+  const inspectorRankPill = document.getElementById('inspector-rank-pill');
+  const inspectorLevelPill = document.getElementById('inspector-level-pill');
+  const inspectorStatusPill = document.getElementById('inspector-status-pill');
+  const inspectorDesc = document.getElementById('inspector-desc');
+  const inspectorChecklist = document.getElementById('inspector-checklist');
+  const inspectorFilename = document.getElementById('inspector-code-filename');
+  const inspectorCode = document.getElementById('inspector-code-snippet');
+  const inspectorLog = document.getElementById('inspector-log');
+  const inspectorLogText = document.getElementById('inspector-log-text');
+  const runTestBtn = document.getElementById('inspector-run-test-btn');
+
+  const metricProd = document.getElementById('metric-prod');
+  const metricProdFill = document.getElementById('metric-prod-fill');
+  const metricAlgo = document.getElementById('metric-algo');
+  const metricAlgoFill = document.getElementById('metric-algo-fill');
+  const metricOpt = document.getElementById('metric-opt');
+  const metricOptFill = document.getElementById('metric-opt-fill');
+  const metricClean = document.getElementById('metric-clean');
+  const metricCleanFill = document.getElementById('metric-clean-fill');
+
+  function updateInspector(skillId, cardElement) {
+    const data = skillsData[skillId];
+    if (!data) return;
+
+    // Update active visual on cards
+    skillCards.forEach(c => c.classList.remove('active-equipped'));
+    if (cardElement) {
+      cardElement.classList.add('active-equipped');
+    }
+
+    // Sync icon SVG clone
+    if (inspectorIconWrap && cardElement) {
+      const sourceSvg = cardElement.querySelector('.pixel-icon-svg');
+      if (sourceSvg) {
+        inspectorIconWrap.innerHTML = sourceSvg.outerHTML;
+      }
+    }
+
+    if (inspectorKicker) inspectorKicker.textContent = data.kicker;
+    if (inspectorTitle) inspectorTitle.textContent = data.name;
+    if (inspectorRankPill) inspectorRankPill.textContent = data.rank;
+    if (inspectorLevelPill) inspectorLevelPill.textContent = data.level;
+    if (inspectorStatusPill) inspectorStatusPill.textContent = data.status;
+    if (inspectorDesc) inspectorDesc.textContent = data.desc;
+
+    if (inspectorChecklist) {
+      inspectorChecklist.innerHTML = data.checklist.map(item => `<li>${item}</li>`).join('');
+    }
+
+    // Update Telemetry metrics
+    if (metricProd) metricProd.textContent = data.metrics.prod + '%';
+    if (metricProdFill) metricProdFill.style.width = data.metrics.prod + '%';
+    if (metricAlgo) metricAlgo.textContent = data.metrics.algo + '%';
+    if (metricAlgoFill) metricAlgoFill.style.width = data.metrics.algo + '%';
+    if (metricOpt) metricOpt.textContent = data.metrics.opt + '%';
+    if (metricOptFill) metricOptFill.style.width = data.metrics.opt + '%';
+    if (metricClean) metricClean.textContent = data.metrics.clean + '%';
+    if (metricCleanFill) metricCleanFill.style.width = data.metrics.clean + '%';
+
+    // Update code snippet
+    if (inspectorFilename) inspectorFilename.textContent = data.filename;
+    if (inspectorCode) inspectorCode.textContent = data.code;
+
+    // Reset log
+    if (inspectorLog) inspectorLog.style.display = 'none';
+  }
+
+  // Attach card event listeners
+  skillCards.forEach(card => {
+    const skillId = card.getAttribute('data-skill-id');
+
+    card.addEventListener('click', () => {
+      playArpeggio();
+      updateInspector(skillId, card);
+    });
+
+    card.addEventListener('mouseenter', () => {
+      play8BitSound(330, 'square', 0.02);
+    });
+
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        playArpeggio();
+        updateInspector(skillId, card);
+      }
+    });
+  });
+
+  // Initialize with Python
+  const initialCard = document.querySelector('.pixel-card[data-skill-id="python"]');
+  if (initialCard) {
+    updateInspector('python', initialCard);
+  }
+
+  // Simulated Test Run
+  if (runTestBtn) {
+    runTestBtn.addEventListener('click', () => {
+      playArpeggio();
+      if (!inspectorLog || !inspectorLogText) return;
+      inspectorLog.style.display = 'flex';
+      inspectorLogText.textContent = 'Executing test suite...';
+
+      setTimeout(() => {
+        const activeCard = document.querySelector('.pixel-card.active-equipped');
+        const activeName = activeCard ? activeCard.querySelector('.skill-name').textContent : 'Selected Skill';
+        inspectorLogText.textContent = `PASS: [${activeName}] Verified (100% assertions passed, latency: 11ms) ✨`;
+        play8BitSound(880, 'triangle', 0.1);
+      }, 350);
+    });
+  }
+
+  // ----------------------------------------------------
+  // ANIMATED PROGRESS BAR FILL ON SCROLL
+  // ----------------------------------------------------
+  const skillsSection = document.getElementById('skills');
+  const meterFills = document.querySelectorAll('.pixel-meter-fill');
+
+  if ('IntersectionObserver' in window && skillsSection) {
+    // Set initial width to 0
+    meterFills.forEach(fill => {
+      const targetWidth = fill.style.width;
+      fill.setAttribute('data-target-width', targetWidth);
+      fill.style.width = '0%';
+    });
+
+    const skillsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          meterFills.forEach((fill, index) => {
+            setTimeout(() => {
+              const target = fill.getAttribute('data-target-width') || '90%';
+              fill.style.width = target;
+            }, index * 40);
+          });
+          skillsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    skillsObserver.observe(skillsSection);
+  }
+});
+
+</script>
+</body>
+</html>
